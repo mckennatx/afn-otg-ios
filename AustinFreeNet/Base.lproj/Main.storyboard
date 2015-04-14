@@ -25,11 +25,22 @@
                                     <segue destination="UNW-ut-bv6" kind="show" id="QPG-f2-v3G"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uha-SL-B3n">
+                                <rect key="frame" x="271" y="329" width="59" height="30"/>
+                                <state key="normal" title="Connect">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="GLx-wg-oaM" kind="show" id="L2k-fB-EQM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="uha-SL-B3n" firstAttribute="top" secondItem="gEq-K5-Muz" secondAttribute="bottom" constant="14" id="4gN-q6-8ar"/>
                             <constraint firstItem="gEq-K5-Muz" firstAttribute="centerY" secondItem="UAs-Vs-P43" secondAttribute="centerY" id="JrO-I1-n6A"/>
                             <constraint firstItem="gEq-K5-Muz" firstAttribute="centerX" secondItem="UAs-Vs-P43" secondAttribute="centerX" id="Qx1-QO-A6s"/>
+                            <constraint firstItem="uha-SL-B3n" firstAttribute="centerX" secondItem="gEq-K5-Muz" secondAttribute="centerX" id="s7Q-Ja-ITB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sEJ-Zg-JY7"/>
@@ -37,6 +48,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKB-dW-Efm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="862" y="592"/>
+        </scene>
+        <!--MapVC-->
+        <scene sceneID="FQd-OS-XuT">
+            <objects>
+                <viewController id="GLx-wg-oaM" customClass="MapVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vMe-7Y-G85"/>
+                        <viewControllerLayoutGuide type="bottom" id="awg-De-KBR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LJd-wV-H2E">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tIn-fp-iC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="862" y="1447"/>
         </scene>
         <!--LearnTVC-->
         <scene sceneID="j1Z-mD-hDw">
