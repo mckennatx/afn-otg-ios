@@ -8,14 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		A20DDEB91ADCAAE40041DA4D /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A20DDEB81ADCAAE40041DA4D /* MainVC.m */; };
-		AC53E9D21ADC9C0A0036FD32 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53E9D11ADC9C0A0036FD32 /* main.m */; };
 		AC53E9D51ADC9C0A0036FD32 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53E9D41ADC9C0A0036FD32 /* AppDelegate.m */; };
 		AC53E9D81ADC9C0A0036FD32 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53E9D71ADC9C0A0036FD32 /* ViewController.m */; };
-		AC53E9DB1ADC9C0A0036FD32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC53E9D91ADC9C0A0036FD32 /* Main.storyboard */; };
 		AC53E9DD1ADC9C0A0036FD32 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC53E9DC1ADC9C0A0036FD32 /* Images.xcassets */; };
-		AC53E9E01ADC9C0A0036FD32 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC53E9DE1ADC9C0A0036FD32 /* LaunchScreen.xib */; };
 		AC53E9EC1ADC9C0A0036FD32 /* AustinFreeNetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53E9EB1ADC9C0A0036FD32 /* AustinFreeNetTests.m */; };
 		AC53E9F71ADC9E180036FD32 /* LearnTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53E9F61ADC9E180036FD32 /* LearnTVC.m */; };
+		F02EC67B1ADD65A7005A24C2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F02EC67A1ADD65A7005A24C2 /* Default-568h@2x.png */; };
+		F02EC6801ADD6895005A24C2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC53E9EA1ADC9C0A0036FD32 /* Info.plist */; };
+		F02EC68B1ADD70CE005A24C2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F02EC68A1ADD70CE005A24C2 /* Info.plist */; };
+		F02EC68E1ADD710A005A24C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F02EC68C1ADD710A005A24C2 /* Main.storyboard */; };
+		F02EC6911ADD7123005A24C2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F02EC68F1ADD7123005A24C2 /* LaunchScreen.xib */; };
+		F02EC6931ADD7164005A24C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F02EC6921ADD7164005A24C2 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,20 +35,23 @@
 		A20DDEB71ADCAAE40041DA4D /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
 		A20DDEB81ADCAAE40041DA4D /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
 		AC53E9CC1ADC9C0A0036FD32 /* AustinFreeNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AustinFreeNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC53E9D01ADC9C0A0036FD32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AC53E9D11ADC9C0A0036FD32 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AC53E9D31ADC9C0A0036FD32 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AC53E9D41ADC9C0A0036FD32 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AC53E9D61ADC9C0A0036FD32 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AC53E9D71ADC9C0A0036FD32 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		AC53E9DA1ADC9C0A0036FD32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC53E9DC1ADC9C0A0036FD32 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		AC53E9DF1ADC9C0A0036FD32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		AC53E9E51ADC9C0A0036FD32 /* AustinFreeNetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AustinFreeNetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC53E9EA1ADC9C0A0036FD32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC53E9EB1ADC9C0A0036FD32 /* AustinFreeNetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AustinFreeNetTests.m; sourceTree = "<group>"; };
 		AC53E9F51ADC9DEB0036FD32 /* LearnTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearnTVC.h; sourceTree = "<group>"; };
 		AC53E9F61ADC9E180036FD32 /* LearnTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnTVC.m; sourceTree = "<group>"; };
+		F02EC67A1ADD65A7005A24C2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F02EC67D1ADD6859005A24C2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F02EC6881ADD7067005A24C2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F02EC68A1ADD70CE005A24C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = AustinFreeNet/Info.plist; sourceTree = "<group>"; };
+		F02EC68D1ADD710A005A24C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = AustinFreeNet/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F02EC6901ADD7123005A24C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = AustinFreeNet/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F02EC6921ADD7164005A24C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AustinFreeNet/main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,9 @@
 		AC53E9C31ADC9C0A0036FD32 = {
 			isa = PBXGroup;
 			children = (
+				F02EC6921ADD7164005A24C2 /* main.m */,
+				F02EC68A1ADD70CE005A24C2 /* Info.plist */,
+				F02EC67A1ADD65A7005A24C2 /* Default-568h@2x.png */,
 				AC53E9CE1ADC9C0A0036FD32 /* AustinFreeNet */,
 				AC53E9E81ADC9C0A0036FD32 /* AustinFreeNetTests */,
 				AC53E9CD1ADC9C0A0036FD32 /* Products */,
@@ -91,13 +100,13 @@
 				AC53E9D41ADC9C0A0036FD32 /* AppDelegate.m */,
 				AC53E9D61ADC9C0A0036FD32 /* ViewController.h */,
 				AC53E9D71ADC9C0A0036FD32 /* ViewController.m */,
-				AC53E9D91ADC9C0A0036FD32 /* Main.storyboard */,
+				F02EC68C1ADD710A005A24C2 /* Main.storyboard */,
 				A20DDEB71ADCAAE40041DA4D /* MainVC.h */,
 				A20DDEB81ADCAAE40041DA4D /* MainVC.m */,
 				AC53E9F51ADC9DEB0036FD32 /* LearnTVC.h */,
 				AC53E9F61ADC9E180036FD32 /* LearnTVC.m */,
 				AC53E9DC1ADC9C0A0036FD32 /* Images.xcassets */,
-				AC53E9DE1ADC9C0A0036FD32 /* LaunchScreen.xib */,
+				F02EC68F1ADD7123005A24C2 /* LaunchScreen.xib */,
 				AC53E9CF1ADC9C0A0036FD32 /* Supporting Files */,
 			);
 			path = AustinFreeNet;
@@ -106,8 +115,8 @@
 		AC53E9CF1ADC9C0A0036FD32 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AC53E9D01ADC9C0A0036FD32 /* Info.plist */,
-				AC53E9D11ADC9C0A0036FD32 /* main.m */,
+				F02EC6881ADD7067005A24C2 /* Info.plist */,
+				F02EC67D1ADD6859005A24C2 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -210,8 +219,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC53E9DB1ADC9C0A0036FD32 /* Main.storyboard in Resources */,
-				AC53E9E01ADC9C0A0036FD32 /* LaunchScreen.xib in Resources */,
+				F02EC6911ADD7123005A24C2 /* LaunchScreen.xib in Resources */,
+				F02EC68E1ADD710A005A24C2 /* Main.storyboard in Resources */,
+				F02EC68B1ADD70CE005A24C2 /* Info.plist in Resources */,
+				F02EC6801ADD6895005A24C2 /* Info.plist in Resources */,
+				F02EC67B1ADD65A7005A24C2 /* Default-568h@2x.png in Resources */,
 				AC53E9DD1ADC9C0A0036FD32 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,11 +242,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F02EC6931ADD7164005A24C2 /* main.m in Sources */,
 				AC53E9F71ADC9E180036FD32 /* LearnTVC.m in Sources */,
 				AC53E9D81ADC9C0A0036FD32 /* ViewController.m in Sources */,
 				AC53E9D51ADC9C0A0036FD32 /* AppDelegate.m in Sources */,
 				A20DDEB91ADCAAE40041DA4D /* MainVC.m in Sources */,
-				AC53E9D21ADC9C0A0036FD32 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,20 +269,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AC53E9D91ADC9C0A0036FD32 /* Main.storyboard */ = {
+		F02EC68C1ADD710A005A24C2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AC53E9DA1ADC9C0A0036FD32 /* Base */,
+				F02EC68D1ADD710A005A24C2 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
-		AC53E9DE1ADC9C0A0036FD32 /* LaunchScreen.xib */ = {
+		F02EC68F1ADD7123005A24C2 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AC53E9DF1ADC9C0A0036FD32 /* Base */,
+				F02EC6901ADD7123005A24C2 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

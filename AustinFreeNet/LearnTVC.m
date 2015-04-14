@@ -49,7 +49,8 @@
     }
     
     NSDictionary *dict = self.modules[indexPath.row];
-    cell.textLabel.text = dict[@"name"];
+	NSLog(@"%@", dict);
+    cell.textLabel.text = [dict objectForKey:@"name"];
     
     return cell;
 }
@@ -85,6 +86,7 @@
                 NSArray *arr = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                 dispatch_async(dispatch_get_main_queue(),^{
                     self.modules = arr;
+					[self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
                 });
                 NSLog(@"%@", self.modules);
             }
