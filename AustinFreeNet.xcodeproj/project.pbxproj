@@ -33,6 +33,7 @@
 		F09026711ADD7C3A00F92889 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F09026701ADD7C3A00F92889 /* QuartzCore.framework */; };
 		F09026731ADD7C4300F92889 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F09026721ADD7C4300F92889 /* SystemConfiguration.framework */; };
 		F09026771ADD7DEF00F92889 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F09026761ADD7DEF00F92889 /* GoogleMaps.bundle */; };
+		F090267A1ADDF11100F92889 /* ModuleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F09026791ADDF11100F92889 /* ModuleVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		F09026701ADD7C3A00F92889 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F09026721ADD7C4300F92889 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F09026761ADD7DEF00F92889 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "../../../../../Downloads/GoogleMaps-iOS-1.9.2/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
+		F09026781ADDF11100F92889 /* ModuleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleVC.h; sourceTree = "<group>"; };
+		F09026791ADDF11100F92889 /* ModuleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 				AC53E9D61ADC9C0A0036FD32 /* ViewController.h */,
 				AC53E9D71ADC9C0A0036FD32 /* ViewController.m */,
 				F02EC68C1ADD710A005A24C2 /* Main.storyboard */,
+				F09026781ADDF11100F92889 /* ModuleVC.h */,
+				F09026791ADDF11100F92889 /* ModuleVC.m */,
 				A20DDEB71ADCAAE40041DA4D /* MainVC.h */,
 				A20DDEB81ADCAAE40041DA4D /* MainVC.m */,
 				AC53E9F51ADC9DEB0036FD32 /* LearnTVC.h */,
@@ -254,7 +259,6 @@
 				TargetAttributes = {
 					AC53E9CB1ADC9C0A0036FD32 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 865FLR5SBC;
 					};
 					AC53E9E41ADC9C0A0036FD32 = {
 						CreatedOnToolsVersion = 6.2;
@@ -314,6 +318,7 @@
 				AC53E9D81ADC9C0A0036FD32 /* ViewController.m in Sources */,
 				F09026551ADD76E500F92889 /* MapVC.m in Sources */,
 				AC53E9D51ADC9C0A0036FD32 /* AppDelegate.m in Sources */,
+				F090267A1ADDF11100F92889 /* ModuleVC.m in Sources */,
 				A20DDEB91ADCAAE40041DA4D /* MainVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

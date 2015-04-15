@@ -95,4 +95,16 @@
     [task resume];
 }
 
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+	if ([segue.destinationViewController isKindOfClass:[ModuleVC class]]) {
+		ModuleVC *mvc = (ModuleVC *)segue.destinationViewController;
+		NSIndexPath *path = [self.tableView indexPathForCell:sender];
+		NSDictionary *dict = self.modules[path.row];
+		mvc.moduleInfo = dict;
+	}
+}
+
 @end

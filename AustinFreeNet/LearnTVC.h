@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ModuleVC.h"
 
 @interface LearnTVC : UITableViewController
 
