@@ -18,6 +18,7 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
+	self.webView.delegate = self;
 	self.title = self.moduleInfo[@"name"];
 	NSURL *fileURL = [NSURL URLWithString:self.moduleInfo[@"data"]];
 	[self.spinner startAnimating];
@@ -58,7 +59,6 @@
 				NSData *data = [NSData dataWithContentsOfURL:location];
 				dispatch_async(dispatch_get_main_queue(), ^{
 					[self.webView loadData:data MIMEType:@"application/pdf" textEncodingName:@"utf-8" baseURL:nil];
-					[self.spinner stopAnimating];
 				});
 				
 			}
@@ -66,6 +66,13 @@
 	}];
 	[task resume];
 //	[self.webView loadRequest:request];
+}
+
+#pragma mark - UIWebView Delegate
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+	[self.spinner stopAnimating];
 }
 
 @end

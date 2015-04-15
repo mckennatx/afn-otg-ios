@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 @import MediaPlayer;
 
-@interface ModuleVC : UIViewController
+@interface ModuleVC : UIViewController<UIWebViewDelegate>
 @property NSDictionary *moduleInfo;
 @end
