@@ -75,4 +75,9 @@
 	[self.spinner stopAnimating];
 }
 
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+	[self.spinner startAnimating];
+}
+
 @end
