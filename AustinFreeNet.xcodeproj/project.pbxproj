@@ -34,6 +34,7 @@
 		F09026731ADD7C4300F92889 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F09026721ADD7C4300F92889 /* SystemConfiguration.framework */; };
 		F09026771ADD7DEF00F92889 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F09026761ADD7DEF00F92889 /* GoogleMaps.bundle */; };
 		F090267A1ADDF11100F92889 /* ModuleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F09026791ADDF11100F92889 /* ModuleVC.m */; };
+		F090268F1AE4888C00F92889 /* mapSearchResultsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F090268E1AE4888C00F92889 /* mapSearchResultsVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,8 @@
 		F09026761ADD7DEF00F92889 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "../../../../../Downloads/GoogleMaps-iOS-1.9.2/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
 		F09026781ADDF11100F92889 /* ModuleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleVC.h; sourceTree = "<group>"; };
 		F09026791ADDF11100F92889 /* ModuleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleVC.m; sourceTree = "<group>"; };
+		F090268D1AE4888C00F92889 /* mapSearchResultsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mapSearchResultsVC.h; sourceTree = "<group>"; };
+		F090268E1AE4888C00F92889 /* mapSearchResultsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mapSearchResultsVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,8 @@
 		AC53E9CE1ADC9C0A0036FD32 /* AustinFreeNet */ = {
 			isa = PBXGroup;
 			children = (
+				F090268D1AE4888C00F92889 /* mapSearchResultsVC.h */,
+				F090268E1AE4888C00F92889 /* mapSearchResultsVC.m */,
 				AC53E9D31ADC9C0A0036FD32 /* AppDelegate.h */,
 				AC53E9D41ADC9C0A0036FD32 /* AppDelegate.m */,
 				AC53E9D61ADC9C0A0036FD32 /* ViewController.h */,
@@ -319,6 +324,7 @@
 				F09026551ADD76E500F92889 /* MapVC.m in Sources */,
 				AC53E9D51ADC9C0A0036FD32 /* AppDelegate.m in Sources */,
 				F090267A1ADDF11100F92889 /* ModuleVC.m in Sources */,
+				F090268F1AE4888C00F92889 /* mapSearchResultsVC.m in Sources */,
 				A20DDEB91ADCAAE40041DA4D /* MainVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
