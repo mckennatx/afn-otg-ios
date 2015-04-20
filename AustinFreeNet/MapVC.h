@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <GoogleMaps/GoogleMaps.h>
+#import <MapKit/MapKit.h>
 
-@interface MapVC : UIViewController<CLLocationManagerDelegate>
+@interface MapVC : UIViewController<CLLocationManagerDelegate, GMSMapViewDelegate, UIActionSheetDelegate>
 +(NSArray *)AFNLocations;
 
 @end
