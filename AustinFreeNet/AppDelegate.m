@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 	[GMSServices provideAPIKey:@"AIzaSyDhbpgwpU0CpIJw9I8v1wjzdfnQ7JlDh54"];
-	[[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0x011940)];
+	[[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0x3e96c7)];
     return YES;
 }
 
