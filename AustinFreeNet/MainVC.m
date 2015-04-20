@@ -9,7 +9,7 @@
 #import "MainVC.h"
 
 @interface MainVC ()
-
+@property (strong, nonatomic) UIAlertController *alertController;
 @end
 
 @implementation MainVC
@@ -27,6 +27,28 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)didPressVolunteerButton:(UIButton *)sender {
+	[self presentViewController:self.alertController animated:YES completion:nil];
+}
+
+- (UIAlertController *)alertController
+{
+	if (!_alertController) {
+		_alertController = [UIAlertController alertControllerWithTitle:@"Volunteer" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+		UIAlertAction *signInAction = [UIAlertAction actionWithTitle:@"Sign In" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+		}];
+		UIAlertAction *signUpAction = [UIAlertAction actionWithTitle:@"Sign Up" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+		}];
+		UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+			
+		}];
+		[_alertController addAction:signInAction];
+		[_alertController addAction:signUpAction];
+		[_alertController addAction:cancelAction];
+	}
+	return _alertController;
 }
 
 /*

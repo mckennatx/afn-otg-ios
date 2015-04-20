@@ -35,13 +35,24 @@
                                     <segue destination="GLx-wg-oaM" kind="show" id="L2k-fB-EQM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8r8-JQ-DAh">
+                                <rect key="frame" x="268" y="367" width="65" height="30"/>
+                                <state key="normal" title="Volunteer">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressVolunteerButton:" destination="xbu-AJ-wYB" eventType="touchUpInside" id="JDx-Sn-HyJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.62745098039215685" green="0.89411764705882357" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uha-SL-B3n" firstAttribute="top" secondItem="gEq-K5-Muz" secondAttribute="bottom" constant="14" id="4gN-q6-8ar"/>
                             <constraint firstItem="gEq-K5-Muz" firstAttribute="centerY" secondItem="UAs-Vs-P43" secondAttribute="centerY" id="JrO-I1-n6A"/>
+                            <constraint firstItem="8r8-JQ-DAh" firstAttribute="top" secondItem="uha-SL-B3n" secondAttribute="bottom" constant="8" symbolic="YES" id="POa-vq-CXM"/>
                             <constraint firstItem="gEq-K5-Muz" firstAttribute="centerX" secondItem="UAs-Vs-P43" secondAttribute="centerX" id="Qx1-QO-A6s"/>
+                            <constraint firstItem="8r8-JQ-DAh" firstAttribute="centerX" secondItem="uha-SL-B3n" secondAttribute="centerX" id="dVk-9k-Rlu"/>
                             <constraint firstItem="uha-SL-B3n" firstAttribute="centerX" secondItem="gEq-K5-Muz" secondAttribute="centerX" id="s7Q-Ja-ITB"/>
                         </constraints>
                     </view>
