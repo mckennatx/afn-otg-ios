@@ -10,7 +10,6 @@
 
 @interface MapVC()
 @property (weak, nonatomic) IBOutlet GMSMapView *mapView;
-@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @end
 
@@ -19,6 +18,8 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
+	
+	self.navigationController.title = @"Connect";
 	
 	self.mapView.myLocationEnabled = YES;
 	self.mapView.settings.myLocationButton = YES;

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tmN-qa-dXg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -27,7 +28,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uha-SL-B3n">
-                                <rect key="frame" x="271" y="329" width="59" height="30"/>
+                                <rect key="frame" x="271" y="323" width="59" height="30"/>
                                 <state key="normal" title="Connect">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -36,7 +37,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8r8-JQ-DAh">
-                                <rect key="frame" x="268" y="367" width="65" height="30"/>
+                                <rect key="frame" x="268" y="361" width="65" height="30"/>
                                 <state key="normal" title="Volunteer">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -44,13 +45,24 @@
                                     <action selector="didPressVolunteerButton:" destination="xbu-AJ-wYB" eventType="touchUpInside" id="JDx-Sn-HyJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yc4-he-28B">
+                                <rect key="frame" x="275" y="399" width="50" height="30"/>
+                                <state key="normal" title="Donate">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="GbP-2g-dlz" kind="show" id="YUj-jf-KSd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.62745098039215685" green="0.89411764705882357" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uha-SL-B3n" firstAttribute="top" secondItem="gEq-K5-Muz" secondAttribute="bottom" constant="14" id="4gN-q6-8ar"/>
+                            <constraint firstItem="Yc4-he-28B" firstAttribute="centerX" secondItem="8r8-JQ-DAh" secondAttribute="centerX" id="1zo-yq-lFz"/>
+                            <constraint firstItem="uha-SL-B3n" firstAttribute="top" secondItem="gEq-K5-Muz" secondAttribute="bottom" constant="8" id="4gN-q6-8ar"/>
                             <constraint firstItem="gEq-K5-Muz" firstAttribute="centerY" secondItem="UAs-Vs-P43" secondAttribute="centerY" id="JrO-I1-n6A"/>
-                            <constraint firstItem="8r8-JQ-DAh" firstAttribute="top" secondItem="uha-SL-B3n" secondAttribute="bottom" constant="8" symbolic="YES" id="POa-vq-CXM"/>
+                            <constraint firstItem="Yc4-he-28B" firstAttribute="top" secondItem="8r8-JQ-DAh" secondAttribute="bottom" constant="8" id="MMv-EM-07n"/>
+                            <constraint firstItem="8r8-JQ-DAh" firstAttribute="top" secondItem="uha-SL-B3n" secondAttribute="bottom" constant="8" id="POa-vq-CXM"/>
                             <constraint firstItem="gEq-K5-Muz" firstAttribute="centerX" secondItem="UAs-Vs-P43" secondAttribute="centerX" id="Qx1-QO-A6s"/>
                             <constraint firstItem="8r8-JQ-DAh" firstAttribute="centerX" secondItem="uha-SL-B3n" secondAttribute="centerX" id="dVk-9k-Rlu"/>
                             <constraint firstItem="uha-SL-B3n" firstAttribute="centerX" secondItem="gEq-K5-Muz" secondAttribute="centerX" id="s7Q-Ja-ITB"/>
@@ -104,6 +116,106 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tIn-fp-iC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="862" y="1447"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="diU-ip-ZtE">
+            <objects>
+                <viewController id="GbP-2g-dlz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EoB-I3-kVn"/>
+                        <viewControllerLayoutGuide type="bottom" id="wTd-dz-wrx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3lC-41-gvP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIx-5d-3Vu">
+                                <rect key="frame" x="182" y="72" width="237" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="237" id="HiM-JM-Zim"/>
+                                    <constraint firstAttribute="width" secondItem="LIx-5d-3Vu" secondAttribute="height" multiplier="237:80" id="Ir3-Eg-i8v"/>
+                                    <constraint firstAttribute="width" priority="750" constant="237" id="wB8-Qd-dU7"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="afn logo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="HiM-JM-Zim"/>
+                                        <exclude reference="wB8-Qd-dU7"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pon-ld-LUc">
+                                <rect key="frame" x="16" y="160" width="568" height="388"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="388" id="lcH-a3-jh9"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Austin Free-Net provides technology training and access for the community, fostering skills that enable people to succeed in a digital age. Our computer labs and classes are open to all; our focus is on under-served communities. The knowledge we offer helps people obtain jobs, improve their lives, and participate as active citizens.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.24313725490196078" green="0.58823529411764708" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name="Avenir-Book"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.24313725490196078" green="0.58823529411764708" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name="Avenir-Book"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> 
+Austin Free-Net is a 501(c)(3), a nonprofit organization that has been working to bridge the digital divide since 1995.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.24313725490196078" green="0.58823529411764708" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name="Avenir-Book"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2et-pt-Ave">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Make a Donation">
+                                    <color key="titleColor" red="0.24313725489999999" green="0.58823529409999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wTd-dz-wrx" firstAttribute="top" secondItem="Pon-ld-LUc" secondAttribute="bottom" constant="52" id="0Wg-hs-VxT"/>
+                            <constraint firstItem="Pon-ld-LUc" firstAttribute="top" secondItem="LIx-5d-3Vu" secondAttribute="bottom" constant="8" symbolic="YES" id="CIJ-gU-XJm"/>
+                            <constraint firstItem="Pon-ld-LUc" firstAttribute="leading" secondItem="3lC-41-gvP" secondAttribute="leadingMargin" id="Ib1-jr-9Qh"/>
+                            <constraint firstItem="2et-pt-Ave" firstAttribute="bottom" secondItem="wTd-dz-wrx" secondAttribute="top" id="fsP-wC-hmR"/>
+                            <constraint firstItem="2et-pt-Ave" firstAttribute="centerX" secondItem="Pon-ld-LUc" secondAttribute="centerX" id="nWV-fi-Uac"/>
+                            <constraint firstItem="Pon-ld-LUc" firstAttribute="centerX" secondItem="LIx-5d-3Vu" secondAttribute="centerX" id="pn3-jK-27H"/>
+                            <constraint firstItem="LIx-5d-3Vu" firstAttribute="top" secondItem="EoB-I3-kVn" secondAttribute="bottom" constant="8" symbolic="YES" id="rHa-Ui-eOn"/>
+                            <constraint firstItem="2et-pt-Ave" firstAttribute="leading" secondItem="3lC-41-gvP" secondAttribute="leading" id="rWY-Jv-NX1"/>
+                            <constraint firstItem="LIx-5d-3Vu" firstAttribute="centerX" secondItem="3lC-41-gvP" secondAttribute="centerX" id="wTE-1v-lmv"/>
+                            <constraint firstItem="2et-pt-Ave" firstAttribute="top" secondItem="Pon-ld-LUc" secondAttribute="bottom" constant="8" symbolic="YES" id="wY2-fR-m1n"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6qm-23-g01" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1423" y="-92"/>
         </scene>
         <!--LearnTVC-->
         <scene sceneID="j1Z-mD-hDw">
@@ -250,5 +362,8 @@
             <point key="canvasLocation" x="1535" y="1307.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="afn logo" width="359" height="117"/>
+    </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

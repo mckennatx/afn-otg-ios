@@ -35,6 +35,7 @@
 		F09026771ADD7DEF00F92889 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F09026761ADD7DEF00F92889 /* GoogleMaps.bundle */; };
 		F090267A1ADDF11100F92889 /* ModuleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F09026791ADDF11100F92889 /* ModuleVC.m */; };
 		F090268F1AE4888C00F92889 /* mapSearchResultsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F090268E1AE4888C00F92889 /* mapSearchResultsVC.m */; };
+		F09026921AE4A18400F92889 /* DonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F09026911AE4A18400F92889 /* DonateViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,8 @@
 		F09026791ADDF11100F92889 /* ModuleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleVC.m; sourceTree = "<group>"; };
 		F090268D1AE4888C00F92889 /* mapSearchResultsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mapSearchResultsVC.h; sourceTree = "<group>"; };
 		F090268E1AE4888C00F92889 /* mapSearchResultsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mapSearchResultsVC.m; sourceTree = "<group>"; };
+		F09026901AE4A18400F92889 /* DonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonateViewController.h; sourceTree = "<group>"; };
+		F09026911AE4A18400F92889 /* DonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonateViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,24 +149,13 @@
 		AC53E9CE1ADC9C0A0036FD32 /* AustinFreeNet */ = {
 			isa = PBXGroup;
 			children = (
-				F090268D1AE4888C00F92889 /* mapSearchResultsVC.h */,
-				F090268E1AE4888C00F92889 /* mapSearchResultsVC.m */,
+				F09026931AE4A1B500F92889 /* Model */,
 				AC53E9D31ADC9C0A0036FD32 /* AppDelegate.h */,
 				AC53E9D41ADC9C0A0036FD32 /* AppDelegate.m */,
-				AC53E9D61ADC9C0A0036FD32 /* ViewController.h */,
-				AC53E9D71ADC9C0A0036FD32 /* ViewController.m */,
 				F02EC68C1ADD710A005A24C2 /* Main.storyboard */,
-				F09026781ADDF11100F92889 /* ModuleVC.h */,
-				F09026791ADDF11100F92889 /* ModuleVC.m */,
-				A20DDEB71ADCAAE40041DA4D /* MainVC.h */,
-				A20DDEB81ADCAAE40041DA4D /* MainVC.m */,
-				AC53E9F51ADC9DEB0036FD32 /* LearnTVC.h */,
-				AC53E9F61ADC9E180036FD32 /* LearnTVC.m */,
 				AC53E9DC1ADC9C0A0036FD32 /* Images.xcassets */,
 				F02EC68F1ADD7123005A24C2 /* LaunchScreen.xib */,
 				AC53E9CF1ADC9C0A0036FD32 /* Supporting Files */,
-				F09026531ADD76E500F92889 /* MapVC.h */,
-				F09026541ADD76E500F92889 /* MapVC.m */,
 			);
 			path = AustinFreeNet;
 			sourceTree = "<group>";
@@ -213,6 +205,27 @@
 				F090265C1ADD7BCE00F92889 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F09026931AE4A1B500F92889 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F09026901AE4A18400F92889 /* DonateViewController.h */,
+				F09026911AE4A18400F92889 /* DonateViewController.m */,
+				F090268D1AE4888C00F92889 /* mapSearchResultsVC.h */,
+				F090268E1AE4888C00F92889 /* mapSearchResultsVC.m */,
+				AC53E9D61ADC9C0A0036FD32 /* ViewController.h */,
+				AC53E9D71ADC9C0A0036FD32 /* ViewController.m */,
+				F09026781ADDF11100F92889 /* ModuleVC.h */,
+				F09026791ADDF11100F92889 /* ModuleVC.m */,
+				A20DDEB71ADCAAE40041DA4D /* MainVC.h */,
+				A20DDEB81ADCAAE40041DA4D /* MainVC.m */,
+				AC53E9F51ADC9DEB0036FD32 /* LearnTVC.h */,
+				AC53E9F61ADC9E180036FD32 /* LearnTVC.m */,
+				F09026531ADD76E500F92889 /* MapVC.h */,
+				F09026541ADD76E500F92889 /* MapVC.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +335,7 @@
 				AC53E9F71ADC9E180036FD32 /* LearnTVC.m in Sources */,
 				AC53E9D81ADC9C0A0036FD32 /* ViewController.m in Sources */,
 				F09026551ADD76E500F92889 /* MapVC.m in Sources */,
+				F09026921AE4A18400F92889 /* DonateViewController.m in Sources */,
 				AC53E9D51ADC9C0A0036FD32 /* AppDelegate.m in Sources */,
 				F090267A1ADDF11100F92889 /* ModuleVC.m in Sources */,
 				F090268F1AE4888C00F92889 /* mapSearchResultsVC.m in Sources */,
