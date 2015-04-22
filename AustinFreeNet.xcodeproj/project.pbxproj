@@ -36,6 +36,9 @@
 		F090267A1ADDF11100F92889 /* ModuleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F09026791ADDF11100F92889 /* ModuleVC.m */; };
 		F090268F1AE4888C00F92889 /* mapSearchResultsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F090268E1AE4888C00F92889 /* mapSearchResultsVC.m */; };
 		F09026921AE4A18400F92889 /* DonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F09026911AE4A18400F92889 /* DonateViewController.m */; };
+		F09026961AE5B5FD00F92889 /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F09026951AE5B5FD00F92889 /* BrowserViewController.m */; };
+		F09026991AE6C43300F92889 /* UIButton+VerticalLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F09026981AE6C43300F92889 /* UIButton+VerticalLayout.m */; };
+		F090269B1AE7F20B00F92889 /* AFN Locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = F090269A1AE7F20A00F92889 /* AFN Locations.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,11 @@
 		F090268E1AE4888C00F92889 /* mapSearchResultsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mapSearchResultsVC.m; sourceTree = "<group>"; };
 		F09026901AE4A18400F92889 /* DonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonateViewController.h; sourceTree = "<group>"; };
 		F09026911AE4A18400F92889 /* DonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonateViewController.m; sourceTree = "<group>"; };
+		F09026941AE5B5FD00F92889 /* BrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserViewController.h; sourceTree = "<group>"; };
+		F09026951AE5B5FD00F92889 /* BrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
+		F09026971AE6C43300F92889 /* UIButton+VerticalLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+VerticalLayout.h"; sourceTree = "<group>"; };
+		F09026981AE6C43300F92889 /* UIButton+VerticalLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+VerticalLayout.m"; sourceTree = "<group>"; };
+		F090269A1AE7F20A00F92889 /* AFN Locations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AFN Locations.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,11 +157,14 @@
 		AC53E9CE1ADC9C0A0036FD32 /* AustinFreeNet */ = {
 			isa = PBXGroup;
 			children = (
+				F090269C1AE7F68300F92889 /* Resources */,
 				F09026931AE4A1B500F92889 /* Model */,
 				AC53E9D31ADC9C0A0036FD32 /* AppDelegate.h */,
 				AC53E9D41ADC9C0A0036FD32 /* AppDelegate.m */,
 				F02EC68C1ADD710A005A24C2 /* Main.storyboard */,
 				AC53E9DC1ADC9C0A0036FD32 /* Images.xcassets */,
+				F09026971AE6C43300F92889 /* UIButton+VerticalLayout.h */,
+				F09026981AE6C43300F92889 /* UIButton+VerticalLayout.m */,
 				F02EC68F1ADD7123005A24C2 /* LaunchScreen.xib */,
 				AC53E9CF1ADC9C0A0036FD32 /* Supporting Files */,
 			);
@@ -224,8 +235,18 @@
 				AC53E9F61ADC9E180036FD32 /* LearnTVC.m */,
 				F09026531ADD76E500F92889 /* MapVC.h */,
 				F09026541ADD76E500F92889 /* MapVC.m */,
+				F09026941AE5B5FD00F92889 /* BrowserViewController.h */,
+				F09026951AE5B5FD00F92889 /* BrowserViewController.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		F090269C1AE7F68300F92889 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F090269A1AE7F20A00F92889 /* AFN Locations.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F02EC6911ADD7123005A24C2 /* LaunchScreen.xib in Resources */,
+				F090269B1AE7F20B00F92889 /* AFN Locations.plist in Resources */,
 				F02EC68E1ADD710A005A24C2 /* Main.storyboard in Resources */,
 				F02EC6801ADD6895005A24C2 /* Info.plist in Resources */,
 				F09026771ADD7DEF00F92889 /* GoogleMaps.bundle in Resources */,
@@ -335,9 +357,11 @@
 				AC53E9F71ADC9E180036FD32 /* LearnTVC.m in Sources */,
 				AC53E9D81ADC9C0A0036FD32 /* ViewController.m in Sources */,
 				F09026551ADD76E500F92889 /* MapVC.m in Sources */,
+				F09026991AE6C43300F92889 /* UIButton+VerticalLayout.m in Sources */,
 				F09026921AE4A18400F92889 /* DonateViewController.m in Sources */,
 				AC53E9D51ADC9C0A0036FD32 /* AppDelegate.m in Sources */,
 				F090267A1ADDF11100F92889 /* ModuleVC.m in Sources */,
+				F09026961AE5B5FD00F92889 /* BrowserViewController.m in Sources */,
 				F090268F1AE4888C00F92889 /* mapSearchResultsVC.m in Sources */,
 				A20DDEB91ADCAAE40041DA4D /* MainVC.m in Sources */,
 			);

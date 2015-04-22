@@ -33,7 +33,7 @@
 	
 	self.mapView.camera = camera;
 	
-	NSArray *locs = [MapVC AFNLocations];
+	NSArray *locs = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"AFN Locations" ofType:@"plist"]];
 	for (NSDictionary *dict in locs) {
 		GMSMarker *m = [[GMSMarker alloc] init];
 		m.position = CLLocationCoordinate2DMake([dict[@"latitude"] doubleValue], [dict[@"longitude"] doubleValue]);
@@ -84,7 +84,6 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
-	NSLog(@"yo");
 	GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude zoom:12.0];
 	[self.mapView animateToCameraPosition:camera];
 }
@@ -106,17 +105,14 @@
 	[self openActionSheet];
 }
 
-+ (NSArray *)AFNLocations
+#pragma mark - Navigation
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-	return @[
-			 @{@"name": @"AFN Rosewood", @"latitude":[NSNumber numberWithDouble:30.269932], @"longitude":[NSNumber numberWithDouble:-97.715876], @"address":@"DeWitty+Job+Training+and+Employment+Center"},
-			 @{@"name":@"ARCH", @"snippet":@"Austin Resource Center for the Homeless", @"latitude":[NSNumber numberWithDouble:30.26787], @"longitude":[NSNumber numberWithDouble:-97.737584], @"address":@"Austin+Resource+Center+for+the+Homeless"},
-			 @{@"name":@"Blackland Neighborhood Center", @"latitude":[NSNumber numberWithDouble:30.280945], @"longitude":[NSNumber numberWithDouble:-97.722188], @"address":@"Blackland+Neighborhood+Center"},
-			 @{@"name":@"Conley-Guerrero Senior Activity Center", @"latitude":[NSNumber numberWithDouble:30.265868], @"longitude":[NSNumber numberWithDouble:-97.710984], @"address":@"Conley-Guerrero+Senior+Activity+Center"},
-			 @{@"name":@"Rosewood-Zaragosa Neighborhood Center", @"latitude":[NSNumber numberWithDouble:30.265391], @"longitude":[NSNumber numberWithDouble:-97.710594], @"address":@"Rosewood-Zaragosa+Neighborhood+Center"},
-			 @{@"name":@"South Austin Neighborhood Center", @"latitude":[NSNumber numberWithDouble:30.239574], @"longitude":[NSNumber numberWithDouble:-97.760286], @"address":@"South+Austin+Neighborhood+Center"},
-			 @{@"name":@"St. John's Neighborhood Center", @"latitude":[NSNumber numberWithDouble:30.3328231], @"longitude":[NSNumber numberWithDouble:-97.6937014], @"address":@"St+Johns+Community+Center+WIC"},
-			 @{@"name":@"Trinity  Center", @"latitude":[NSNumber numberWithDouble:30.2685762], @"longitude":[NSNumber numberWithDouble:-97.7397648], @"address":@"304+E+7th+Street+78701"}];
+	if ([segue.destinationViewController isKindOfClass:[BrowserViewController class]]) {
+		BrowserViewController *browserVC = (BrowserViewController *)segue.destinationViewController;
+		NSURL *questionUrl = [NSURL URLWithString:@"http://form.jotform.us/form/50925791023151"];
+		browserVC.url = questionUrl;
+	}
 }
 
 @end

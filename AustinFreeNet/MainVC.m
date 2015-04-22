@@ -9,6 +9,8 @@
 #import "MainVC.h"
 
 @interface MainVC ()
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
+
 @property (strong, nonatomic) UIAlertController *alertController;
 @end
 
@@ -17,11 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+	for (UIButton *button in self.buttons) {
+		button.layer.cornerRadius = 10.0;
+		[button.layer setMasksToBounds:YES];
+		
+		[button centerVerticallyWithPadding:30.0f];
+	}
     // Do any additional setup after loading the view.
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"Preparing for Segue");
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>AFN Rosewood</string>
+		<key>latitude</key>
+		<real>30.269932</real>
+		<key>longitude</key>
+		<real>-97.71587599999999</real>
+		<key>address</key>
+		<string>Dewitty+Job+Training+and+Employment+Center</string>
+		<key>snippet</key>
+		<string>Dewitty Center</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ARCH</string>
+		<key>snippet</key>
+		<string>Austin Resource Center for the Homeless</string>
+		<key>latitude</key>
+		<real>30.26787</real>
+		<key>longitude</key>
+		<real>-97.73584</real>
+		<key>address</key>
+		<string>Austin+Resource+Center+for+the+Homeless</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Blackland Neighborhood Center</string>
+		<key>latitude</key>
+		<real>30.28945</real>
+		<key>longitude</key>
+		<real>-97.722188</real>
+		<key>address</key>
+		<string>Blackland+Neighborhood+Center</string>
+	</dict>
+	<dict>
+		<key>longitude</key>
+		<real>-97.710984</real>
+		<key>address</key>
+		<string>Conley-Guerrero+Senior+Activity+Center</string>
+		<key>latitude</key>
+		<real>30.265868</real>
+		<key>name</key>
+		<string>Conley-Guerrero Senior Activity Center</string>
+	</dict>
+	<dict>
+		<key>longitude</key>
+		<real>-97.710594</real>
+		<key>address</key>
+		<string>Rosewood-Zaragosa+Neighborhood+Center</string>
+		<key>latitude</key>
+		<real>30.265391</real>
+		<key>name</key>
+		<string>Rosewood-Zaragosa Neighborhood Center</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>South Austin Neighborhood Center</string>
+		<key>latitude</key>
+		<real>30.239574</real>
+		<key>longitude</key>
+		<real>-97.710594</real>
+		<key>address</key>
+		<string>South+Austin+Neighborhood+Center</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>St. John&apos;s Neighborhood Center</string>
+		<key>latitude</key>
+		<real>30.3328231</real>
+		<key>longitude</key>
+		<real>-97.69370139999999</real>
+		<key>address</key>
+		<string>St+Johns+Community+Center+WIC</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Trinity Center</string>
+		<key>latitude</key>
+		<real>30.2685762</real>
+		<key>longitude</key>
+		<real>-97.7397648</real>
+		<key>address</key>
+		<string>304+E+7th+Street+78701</string>
+	</dict>
+</array>
+</plist>

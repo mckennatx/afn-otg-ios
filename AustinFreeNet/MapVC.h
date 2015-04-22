@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <GoogleMaps/GoogleMaps.h>
 #import <MapKit/MapKit.h>
+#import "BrowserViewController.h"
 
 @interface MapVC : UIViewController<CLLocationManagerDelegate, GMSMapViewDelegate, UIActionSheetDelegate>
-+(NSArray *)AFNLocations;
-
+//#define QUESTION_URL @"http://form.jotform.us/form/50925791023151"
 @end

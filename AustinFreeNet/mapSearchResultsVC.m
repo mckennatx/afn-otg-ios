@@ -60,7 +60,7 @@
 - (NSArray *)locations
 {
 	if (!_locations) {
-		_locations = [MapVC AFNLocations];
+		_locations = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"AFN Locations" ofType:@"plist"]];
 	}
 	return _locations;
 }
