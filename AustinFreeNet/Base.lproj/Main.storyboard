@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7G-8i-O8G">
-                                <rect key="frame" x="189" y="20" width="223" height="73"/>
+                                <rect key="frame" x="189" y="0.0" width="223" height="93"/>
                                 <state key="normal" image="l1_logo_lg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -91,6 +91,7 @@
                             <constraint firstItem="uha-SL-B3n" firstAttribute="width" secondItem="gEq-K5-Muz" secondAttribute="width" id="mOO-K9-8RV"/>
                             <constraint firstItem="Q7G-8i-O8G" firstAttribute="centerX" secondItem="UAs-Vs-P43" secondAttribute="centerX" id="oI0-SP-uVa"/>
                             <constraint firstItem="uha-SL-B3n" firstAttribute="width" secondItem="Yc4-he-28B" secondAttribute="width" id="pul-Rt-nhY"/>
+                            <constraint firstItem="Q7G-8i-O8G" firstAttribute="top" secondItem="UAs-Vs-P43" secondAttribute="topMargin" id="wBJ-rr-E9c"/>
                             <constraint firstItem="gEq-K5-Muz" firstAttribute="trailing" secondItem="Yc4-he-28B" secondAttribute="trailing" id="z98-id-b2d"/>
                         </constraints>
                     </view>
@@ -155,6 +156,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="containerView" destination="0Y0-AB-cao" id="5YL-bR-RAH"/>
                         <outlet property="mapView" destination="4TL-Di-8KL" id="hvF-Ao-jx9"/>
                     </connections>
                 </viewController>

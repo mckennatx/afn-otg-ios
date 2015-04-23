@@ -20,7 +20,6 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    NSLog(@"did load");
 }
 
 - (IBAction)didRefresh:(UIRefreshControl *)sender {
@@ -49,7 +48,7 @@
     }
     
     NSDictionary *dict = self.modules[indexPath.row];
-	NSLog(@"%@", dict);
+	//NSLog(@"%@", dict);
     cell.textLabel.text = [dict objectForKey:@"name"];
     
     return cell;
@@ -60,7 +59,7 @@
 - (NSArray *)modules
 {
     if (!_modules) {
-        NSLog(@"getting modules");
+//        NSLog(@"getting modules");
         [self getModulesWithURL:[NSURL URLWithString:@"http://austinfreenet.pythonanywhere.com"]];
     }
     return _modules;
@@ -76,19 +75,19 @@
     NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
         //NSLog(@"%@", response);
-        NSLog(@"%@", request.URL);
-        
+//        NSLog(@"%@", request.URL);
+		
         if (!error) {
-            NSLog(@"no error");
+//            NSLog(@"no error");
             if ([request.URL isEqual:url]) {
                 //NSLog(@"pulling json from url");
-                NSLog(@"data: %@", data);
+//                NSLog(@"data: %@", data);
                 NSArray *arr = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                 dispatch_async(dispatch_get_main_queue(),^{
                     self.modules = arr;
 					[self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
                 });
-                NSLog(@"%@", self.modules);
+//                NSLog(@"%@", self.modules);
             }
         }
     }];

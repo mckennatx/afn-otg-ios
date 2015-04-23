@@ -11,7 +11,9 @@
 @interface MapVC()
 @property (weak, nonatomic) IBOutlet GMSMapView *mapView;
 @property (strong, nonatomic) CLLocationManager *locationManager;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (strong, nonatomic) UIActionSheet *actionSheet;
+@property (nonatomic) CGRect containerFrame;
 @end
 
 @implementation MapVC
@@ -21,6 +23,8 @@
 	[super viewDidLoad];
 	
 	self.navigationController.title = @"Connect";
+	
+	self.containerFrame = CGRectMake(self.containerView.frame.origin.x, self.containerView.frame.origin.y, self.containerView.frame.size.width, self.containerView.frame.size.height);
 	
 	self.mapView.myLocationEnabled = YES;
 	self.mapView.delegate = self;
@@ -45,6 +49,15 @@
 		m.userData = dict[@"address"];
 		m.map = self.mapView;
 	}
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveStartSearchNotification:) name:@"Start Search" object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(receiveFinishedSearchNotification:) name:@"Finish Search" object:nil];
+}
+
+- (void)dealloc
+{
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)openActionSheet
@@ -55,9 +68,24 @@
 - (UIActionSheet *)actionSheet
 {
 	if (!_actionSheet) {
-		_actionSheet = [[UIActionSheet alloc] initWithTitle:@"Open in Maps" delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:@"Apple Maps",@"Google Maps", nil];
+		_actionSheet = [[UIActionSheet alloc] initWithTitle:@"Open in Maps" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Apple Maps",@"Google Maps", nil];
 	}
 	return _actionSheet;
+}
+
+- (void)receiveStartSearchNotification:(NSNotification *)notification
+{
+	CGRect newFrame = CGRectMake(0.0, self.mapView.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
+	[UIView animateWithDuration:0.3 animations:^{
+		[self.containerView setFrame:newFrame];
+	}];
+}
+
+- (void)receiveFinishedSearchNotification:(NSNotification *)notification
+{
+	[UIView animateWithDuration:0.3 animations:^{
+		[self.containerView setFrame:self.containerFrame];
+	}];
 }
 
 #pragma mark - UIActionSheetDelegate
@@ -74,7 +102,6 @@
 		// Google Maps
 		if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"comgooglemaps://"]]) {
 			NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"comgooglemaps://?q=%@&ll=%f,%f&zoom=14", marker.userData, marker.position.latitude, marker.position.longitude]];
-			NSLog(@"%@", url);
 			[[UIApplication sharedApplication] openURL:url];
 		}
 	}

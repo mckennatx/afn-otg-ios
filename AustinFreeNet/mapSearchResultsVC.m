@@ -96,6 +96,8 @@
 
 - (void)filterContentForSearchText:(NSString *)searchText scope:(NSString *)scope
 {
+	NSLog(@"filter content");
+
 	NSPredicate *resultsPredicate = [NSPredicate predicateWithFormat:@"name like[c] %@", searchText];
 	self.searchResults = [NSMutableArray arrayWithArray:[self.locations filteredArrayUsingPredicate:resultsPredicate]];
 }
@@ -104,6 +106,7 @@
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController
 {
+	NSLog(@"update results");
 	NSString *query = searchController.searchBar.text;
 	[self filterContentForSearchText:query scope:nil];
 	[self.tableView reloadData];
@@ -115,6 +118,27 @@
 	[self updateSearchResultsForSearchController:self.searchController];
 }
 
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"Start Search" object:self];
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
+{
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"Finish Search" object:self];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+	NSLog(@"Search button clicked");
+	[self updateSearchResultsForSearchController:self.searchController];
+	__weak __typeof(self) weakSelf = self;
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[weakSelf.searchController resignFirstResponder];
+	});
+//	[self.searchController.searchBar resignFirstResponder];
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"Finish Search" object:self];
+}
 
 /*
 #pragma mark - Navigation

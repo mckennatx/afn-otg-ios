@@ -25,6 +25,7 @@
 		
 		[button centerVerticallyWithPadding:30.0f];
 	}
+	self.navigationController.navigationBarHidden = YES;
     // Do any additional setup after loading the view.
 }
 
