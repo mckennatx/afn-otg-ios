@@ -20,7 +20,6 @@
     [super viewDidLoad];
 	self.tableView.delegate = self;
 	self.tableView.dataSource = self;
-	self.definesPresentationContext = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -113,11 +112,6 @@
 }
 
 #pragma mark - UISearchBarDelegate
-- (void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope
-{
-	[self updateSearchResultsForSearchController:self.searchController];
-}
-
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
 {
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"Start Search" object:self];
@@ -125,6 +119,11 @@
 
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
 {
+	__weak __typeof(self) weakSelf = self;
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[weakSelf.searchController resignFirstResponder];
+		[weakSelf.searchController.searchBar endEditing:YES];
+	});
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"Finish Search" object:self];
 }
 

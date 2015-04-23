@@ -24,7 +24,7 @@
 	
 	self.navigationController.title = @"Connect";
 	
-	self.containerFrame = CGRectMake(self.containerView.frame.origin.x, self.containerView.frame.origin.y, self.containerView.frame.size.width, self.containerView.frame.size.height);
+	self.containerFrame = CGRectMake(self.containerView.frame.origin.x, self.containerView.frame.origin.y, self.containerView.bounds.size.width, self.containerView.bounds.size.height);
 	
 	self.mapView.myLocationEnabled = YES;
 	self.mapView.delegate = self;
