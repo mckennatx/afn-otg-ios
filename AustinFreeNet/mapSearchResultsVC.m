@@ -135,6 +135,7 @@
 	__weak __typeof(self) weakSelf = self;
 	dispatch_async(dispatch_get_main_queue(), ^{
 		[weakSelf.searchController resignFirstResponder];
+		[weakSelf.searchController.searchBar endEditing:YES];
 	});
 //	[self.searchController.searchBar resignFirstResponder];
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"Finish Search" object:self];
