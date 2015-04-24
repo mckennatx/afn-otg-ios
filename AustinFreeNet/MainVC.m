@@ -25,8 +25,11 @@
 		
 		[button centerVerticallyWithPadding:30.0f];
 	}
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
 	self.navigationController.navigationBarHidden = YES;
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,8 +46,11 @@
 	if (!_alertController) {
 		_alertController = [UIAlertController alertControllerWithTitle:@"Volunteer" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
 		UIAlertAction *signInAction = [UIAlertAction actionWithTitle:@"Sign In" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+			[self performSegueWithIdentifier:SIGN_IN_SEGUE sender:self];
 		}];
+		
 		UIAlertAction *signUpAction = [UIAlertAction actionWithTitle:@"Sign Up" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+			[self performSegueWithIdentifier:SIGN_UP_SEGUE sender:self];
 		}];
 		UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
 			
@@ -64,6 +70,13 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 	self.navigationController.navigationBarHidden = NO;
+	if ([segue.identifier isEqualToString:SIGN_IN_SEGUE]) {
+		BrowserViewController *browserVC = (BrowserViewController *)segue.destinationViewController;
+		browserVC.url = [NSURL URLWithString:VOLUNTEER_SIGN_IN];
+	} else if ([segue.identifier isEqualToString:SIGN_UP_SEGUE]) {
+		BrowserViewController *browserVC = (BrowserViewController *)segue.destinationViewController;
+		browserVC.url = [NSURL URLWithString:VOLUNTEER_SIGN_UP];
+	}
 }
 
 

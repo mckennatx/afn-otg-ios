@@ -20,14 +20,17 @@
     // Do any additional setup after loading the view.
 	[self.view addSubview:self.webView];
 	[self.view addSubview:self.spinner];
+	self.webView.delegate = self;
 	[self makeRequest];
 }
 
 - (void)makeRequest
 {
-	NSURL *url = [NSURL URLWithString:@"http://form.jotform.us/form/50925791023151"];
-	NSURLRequest *request = [NSURLRequest requestWithURL:url];
+	NSLog(@"BrowserViewController makeRequest");
+	NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
+//	self.webView.hidden = YES;
 //	UIWebView *webView = (UIWebView *)self.view;
+	[self.spinner startAnimating];
 	[self.webView loadRequest:request];
 }
 
@@ -40,6 +43,7 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
 	[self.spinner stopAnimating];
+//	self.webView.hidden=NO;
 }
 
 /*

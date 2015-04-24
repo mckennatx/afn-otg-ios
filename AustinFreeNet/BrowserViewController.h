@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainVC.h"
 @import WebKit;
 
 @interface BrowserViewController : UIViewController<UIWebViewDelegate>

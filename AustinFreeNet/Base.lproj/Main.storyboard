@@ -101,11 +101,13 @@
                         <outletCollection property="buttons" destination="gEq-K5-Muz" id="asI-ZP-Pji"/>
                         <outletCollection property="buttons" destination="uha-SL-B3n" id="rIJ-1u-5Kv"/>
                         <outletCollection property="buttons" destination="Yc4-he-28B" id="MLS-MP-P8M"/>
+                        <segue destination="VOp-vM-3oF" kind="show" identifier="Sign In" id="xza-oQ-57I"/>
+                        <segue destination="VOp-vM-3oF" kind="show" identifier="Sign Up" id="gUQ-xI-MjY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKB-dW-Efm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="862" y="592"/>
+            <point key="canvasLocation" x="703" y="632"/>
         </scene>
         <!--MapVC-->
         <scene sceneID="FQd-OS-XuT">
@@ -420,7 +422,7 @@ Austin Free-Net is a 501(c)(3), a nonprofit organization that has been working t
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="UdF-6L-D0R">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="UdF-6L-D0R">
                                 <rect key="frame" x="290" y="290" width="20" height="20"/>
                             </activityIndicatorView>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V3E-ps-G8a">
@@ -430,7 +432,9 @@ Austin Free-Net is a 501(c)(3), a nonprofit organization that has been working t
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="UdF-6L-D0R" firstAttribute="centerX" secondItem="V3E-ps-G8a" secondAttribute="centerX" id="7xF-wd-DE1"/>
                             <constraint firstAttribute="bottom" secondItem="V3E-ps-G8a" secondAttribute="bottom" id="9Rk-Lm-wIJ"/>
+                            <constraint firstItem="UdF-6L-D0R" firstAttribute="centerY" secondItem="V3E-ps-G8a" secondAttribute="centerY" id="JgK-I6-xRF"/>
                             <constraint firstItem="V3E-ps-G8a" firstAttribute="leading" secondItem="67v-ZX-j8s" secondAttribute="leading" id="Ldi-IW-B6Y"/>
                             <constraint firstItem="V3E-ps-G8a" firstAttribute="top" secondItem="67v-ZX-j8s" secondAttribute="top" id="ZT9-dC-tDl"/>
                             <constraint firstAttribute="trailing" secondItem="V3E-ps-G8a" secondAttribute="trailing" id="jsN-tf-paP"/>
@@ -445,7 +449,7 @@ Austin Free-Net is a 501(c)(3), a nonprofit organization that has been working t
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uoc-PZ-qJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2227" y="1587"/>
+            <point key="canvasLocation" x="470" y="1382"/>
         </scene>
     </scenes>
     <resources>
@@ -456,5 +460,8 @@ Austin Free-Net is a 501(c)(3), a nonprofit organization that has been working t
         <image name="l1_logo_lg" width="223" height="73"/>
         <image name="l1_volunteer" width="128" height="128"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="gUQ-xI-MjY"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
