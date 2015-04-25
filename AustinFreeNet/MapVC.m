@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet GMSMapView *mapView;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UIView *containerView;
+@property (weak, nonatomic) IBOutlet UIButton *questionButton;
 @property (strong, nonatomic) UIActionSheet *actionSheet;
 @property (nonatomic) CGRect containerFrame;
 @end
@@ -22,10 +23,18 @@
 {
 	[super viewDidLoad];
 	
+	// navigation controller
 	self.navigationController.title = @"Connect";
 	
+	// question button
+	[self.questionButton formatWithDetailAccessory];
+	[self.questionButton addTopBorderWithColor:UIColorFromRGB(0xc7c7cc)];
+	[self.questionButton.imageView setBackgroundColor:UIColorFromRGB(0x3e96c7)];
+	
+	// container view
 	self.containerFrame = CGRectMake(self.containerView.frame.origin.x, self.containerView.frame.origin.y, self.containerView.bounds.size.width, self.containerView.bounds.size.height);
 	
+	// map view
 	self.mapView.myLocationEnabled = YES;
 	self.mapView.delegate = self;
 	self.mapView.settings.myLocationButton = YES;

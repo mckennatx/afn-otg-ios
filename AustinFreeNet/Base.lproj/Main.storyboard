@@ -120,45 +120,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4TL-Di-8KL" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="64" width="600" height="353"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Y0-AB-cao">
-                                <rect key="frame" x="0.0" y="417" width="600" height="183"/>
+                                <rect key="frame" x="0.0" y="395" width="600" height="161"/>
                                 <connections>
                                     <segue destination="ZDl-Lr-rO4" kind="embed" id="W7N-zz-BAV"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jc-m4-hjU">
-                                <rect key="frame" x="0.0" y="570" width="600" height="30"/>
-                                <color key="backgroundColor" red="0.24313725489999999" green="0.58823529409999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Ask a Question">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jc-m4-hjU">
+                                <rect key="frame" x="0.0" y="553" width="600" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="BcV-Sy-utn"/>
+                                </constraints>
+                                <color key="tintColor" red="0.24313725489999999" green="0.58823529409999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Ask a Question?" image="l2_banner_connect">
+                                    <color key="titleColor" red="0.24313725489999999" green="0.58823529409999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="VOp-vM-3oF" kind="show" id="2JT-z7-o1O"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4TL-Di-8KL" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="332"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0Y0-AB-cao" firstAttribute="leading" secondItem="4TL-Di-8KL" secondAttribute="leading" id="70b-Hd-dIZ"/>
                             <constraint firstItem="0Y0-AB-cao" firstAttribute="trailing" secondItem="4TL-Di-8KL" secondAttribute="trailing" id="8yK-0N-Rdx"/>
                             <constraint firstItem="0Y0-AB-cao" firstAttribute="leading" secondItem="LJd-wV-H2E" secondAttribute="leading" id="A5w-IS-eF8"/>
-                            <constraint firstItem="6jc-m4-hjU" firstAttribute="trailing" secondItem="0Y0-AB-cao" secondAttribute="trailing" id="Lwu-si-pBb"/>
                             <constraint firstAttribute="trailing" secondItem="0Y0-AB-cao" secondAttribute="trailing" id="Nc9-VQ-cDf"/>
-                            <constraint firstItem="6jc-m4-hjU" firstAttribute="bottom" secondItem="awg-De-KBR" secondAttribute="top" id="Nl3-25-SEM"/>
-                            <constraint firstItem="6jc-m4-hjU" firstAttribute="leading" secondItem="0Y0-AB-cao" secondAttribute="leading" id="Wh3-wg-zDl"/>
-                            <constraint firstItem="0Y0-AB-cao" firstAttribute="top" secondItem="4TL-Di-8KL" secondAttribute="bottom" id="XbK-FR-vbe"/>
+                            <constraint firstItem="0Y0-AB-cao" firstAttribute="top" secondItem="4TL-Di-8KL" secondAttribute="bottom" constant="-1" id="XbK-FR-vbe"/>
+                            <constraint firstItem="6jc-m4-hjU" firstAttribute="leading" secondItem="0Y0-AB-cao" secondAttribute="leading" id="Yc9-m8-aip"/>
                             <constraint firstItem="4TL-Di-8KL" firstAttribute="top" secondItem="vMe-7Y-G85" secondAttribute="bottom" id="dO4-gl-tHp"/>
-                            <constraint firstItem="0Y0-AB-cao" firstAttribute="bottom" secondItem="awg-De-KBR" secondAttribute="top" id="ea3-JC-328"/>
-                            <constraint firstItem="0Y0-AB-cao" firstAttribute="top" secondItem="LJd-wV-H2E" secondAttribute="top" constant="417" id="uK9-9u-m26"/>
+                            <constraint firstItem="0Y0-AB-cao" firstAttribute="bottom" secondItem="awg-De-KBR" secondAttribute="top" constant="-44" id="ea3-JC-328"/>
+                            <constraint firstItem="6jc-m4-hjU" firstAttribute="trailing" secondItem="0Y0-AB-cao" secondAttribute="trailing" id="s6M-gK-Ubk"/>
+                            <constraint firstItem="6jc-m4-hjU" firstAttribute="bottom" secondItem="awg-De-KBR" secondAttribute="top" id="tdo-IV-67d"/>
+                            <constraint firstItem="0Y0-AB-cao" firstAttribute="top" secondItem="LJd-wV-H2E" secondAttribute="top" constant="395" id="uK9-9u-m26"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="containerView" destination="0Y0-AB-cao" id="5YL-bR-RAH"/>
                         <outlet property="mapView" destination="4TL-Di-8KL" id="hvF-Ao-jx9"/>
+                        <outlet property="questionButton" destination="6jc-m4-hjU" id="AB5-Rb-LZp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tIn-fp-iC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -384,7 +389,7 @@ IAo
             <objects>
                 <tableViewController id="ZDl-Lr-rO4" customClass="mapSearchResultsVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="uOJ-YU-Sr0">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="183"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="161"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="prominent" placeholder="Search by location" id="CpF-Il-ruB">
@@ -469,11 +474,12 @@ IAo
         <image name="l1_learn" width="192" height="192"/>
         <image name="l1_logo_lg" width="335" height="110"/>
         <image name="l1_volunteer" width="192" height="192"/>
+        <image name="l2_banner_connect" width="83" height="83"/>
         <image name="l2_banner_donate" width="83" height="83"/>
         <image name="l2_logo_lg" width="335" height="110"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zxs-bl-ykh"/>
+        <segue reference="2JT-z7-o1O"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
