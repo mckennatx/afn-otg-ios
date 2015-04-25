@@ -9,6 +9,7 @@
 #import "DonateViewController.h"
 
 @interface DonateViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *donateButton;
 
 @end
 
@@ -18,6 +19,9 @@
     [super viewDidLoad];
 	self.navigationController.title = @"Donate";
     // Do any additional setup after loading the view.
+	[self.donateButton.imageView setBackgroundColor:UIColorFromRGB(0x3e96c7)];
+	[self.donateButton.imageView setImage:[UIImage imageNamed:@"l2_banner_donate"]];
+	[self.donateButton formatWithDetailAccessory];
 }
 
 - (void)didReceiveMemoryWarning {

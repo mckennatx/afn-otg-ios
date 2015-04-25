@@ -166,10 +166,10 @@
             </objects>
             <point key="canvasLocation" x="862" y="1447"/>
         </scene>
-        <!--View Controller-->
+        <!--Donate View Controller-->
         <scene sceneID="diU-ip-ZtE">
             <objects>
-                <viewController id="GbP-2g-dlz" sceneMemberID="viewController">
+                <viewController id="GbP-2g-dlz" customClass="DonateViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EoB-I3-kVn"/>
                         <viewControllerLayoutGuide type="bottom" id="wTd-dz-wrx"/>
@@ -178,28 +178,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIx-5d-3Vu">
-                                <rect key="frame" x="182" y="72" width="237" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="237" id="HiM-JM-Zim"/>
-                                    <constraint firstAttribute="width" secondItem="LIx-5d-3Vu" secondAttribute="height" multiplier="237:80" id="Ir3-Eg-i8v"/>
-                                    <constraint firstAttribute="width" priority="750" constant="237" id="wB8-Qd-dU7"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="afn logo">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="HiM-JM-Zim"/>
-                                        <exclude reference="wB8-Qd-dU7"/>
-                                    </mask>
-                                </variation>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pon-ld-LUc">
-                                <rect key="frame" x="16" y="160" width="568" height="388"/>
+                                <rect key="frame" x="16" y="149" width="568" height="398"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="388" id="lcH-a3-jh9"/>
+                                    <constraint firstAttribute="height" constant="398" id="lcH-a3-jh9"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -238,29 +221,48 @@ Austin Free-Net is a 501(c)(3), a nonprofit organization that has been working t
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2et-pt-Ave">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <size key="titleShadowOffset" width="2" height="2"/>
-                                <state key="normal" title="Make a Donation">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8g-vz-SyG">
+                                <rect key="frame" x="0.0" y="545" width="600" height="55"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Donate" image="l2_banner_donate">
                                     <color key="titleColor" red="0.24313725489999999" green="0.58823529409999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIx-5d-3Vu">
+                                <rect key="frame" x="198" y="72" width="204" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="237" id="HiM-JM-Zim"/>
+                                    <constraint firstAttribute="width" secondItem="LIx-5d-3Vu" secondAttribute="height" multiplier="237:80" id="Ir3-Eg-i8v"/>
+                                    <constraint firstAttribute="width" priority="750" constant="237" id="wB8-Qd-dU7"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="afn logo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="HiM-JM-Zim"/>
+                                        <exclude reference="wB8-Qd-dU7"/>
+                                    </mask>
+                                </variation>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wTd-dz-wrx" firstAttribute="top" secondItem="Pon-ld-LUc" secondAttribute="bottom" constant="52" id="0Wg-hs-VxT"/>
+                            <constraint firstItem="wTd-dz-wrx" firstAttribute="top" secondItem="Pon-ld-LUc" secondAttribute="bottom" constant="53" id="0Wg-hs-VxT"/>
                             <constraint firstItem="Pon-ld-LUc" firstAttribute="top" secondItem="LIx-5d-3Vu" secondAttribute="bottom" constant="8" symbolic="YES" id="CIJ-gU-XJm"/>
+                            <constraint firstItem="z8g-vz-SyG" firstAttribute="bottom" secondItem="wTd-dz-wrx" secondAttribute="top" id="CJO-vY-qPc"/>
                             <constraint firstItem="Pon-ld-LUc" firstAttribute="leading" secondItem="3lC-41-gvP" secondAttribute="leadingMargin" id="Ib1-jr-9Qh"/>
-                            <constraint firstItem="2et-pt-Ave" firstAttribute="bottom" secondItem="wTd-dz-wrx" secondAttribute="top" id="fsP-wC-hmR"/>
-                            <constraint firstItem="2et-pt-Ave" firstAttribute="centerX" secondItem="Pon-ld-LUc" secondAttribute="centerX" id="nWV-fi-Uac"/>
+                            <constraint firstItem="z8g-vz-SyG" firstAttribute="top" secondItem="Pon-ld-LUc" secondAttribute="bottom" constant="-2" id="P7s-8t-J2B"/>
+                            <constraint firstItem="z8g-vz-SyG" firstAttribute="leading" secondItem="3lC-41-gvP" secondAttribute="leading" id="Y4S-qb-53K"/>
                             <constraint firstItem="Pon-ld-LUc" firstAttribute="centerX" secondItem="LIx-5d-3Vu" secondAttribute="centerX" id="pn3-jK-27H"/>
                             <constraint firstItem="LIx-5d-3Vu" firstAttribute="top" secondItem="EoB-I3-kVn" secondAttribute="bottom" constant="8" symbolic="YES" id="rHa-Ui-eOn"/>
-                            <constraint firstItem="2et-pt-Ave" firstAttribute="leading" secondItem="3lC-41-gvP" secondAttribute="leading" id="rWY-Jv-NX1"/>
                             <constraint firstItem="LIx-5d-3Vu" firstAttribute="centerX" secondItem="3lC-41-gvP" secondAttribute="centerX" id="wTE-1v-lmv"/>
-                            <constraint firstItem="2et-pt-Ave" firstAttribute="top" secondItem="Pon-ld-LUc" secondAttribute="bottom" constant="8" symbolic="YES" id="wY2-fR-m1n"/>
+                            <constraint firstItem="z8g-vz-SyG" firstAttribute="centerX" secondItem="Pon-ld-LUc" secondAttribute="centerX" id="wzs-14-4Tf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="donateButton" destination="z8g-vz-SyG" id="D4B-i3-a7x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6qm-23-g01" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -449,7 +451,7 @@ Austin Free-Net is a 501(c)(3), a nonprofit organization that has been working t
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uoc-PZ-qJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="470" y="1382"/>
+            <point key="canvasLocation" x="-46" y="1848"/>
         </scene>
     </scenes>
     <resources>
@@ -459,6 +461,7 @@ Austin Free-Net is a 501(c)(3), a nonprofit organization that has been working t
         <image name="l1_learn" width="128" height="128"/>
         <image name="l1_logo_lg" width="223" height="73"/>
         <image name="l1_volunteer" width="128" height="128"/>
+        <image name="l2_banner_donate" width="55" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="gUQ-xI-MjY"/>

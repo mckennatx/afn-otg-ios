@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+#import "UIButton+DetailAccessory.h"
 
 @interface DonateViewController : UIViewController
 

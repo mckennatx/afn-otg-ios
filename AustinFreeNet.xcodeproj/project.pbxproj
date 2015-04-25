@@ -39,6 +39,7 @@
 		F09026961AE5B5FD00F92889 /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F09026951AE5B5FD00F92889 /* BrowserViewController.m */; };
 		F09026991AE6C43300F92889 /* UIButton+VerticalLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F09026981AE6C43300F92889 /* UIButton+VerticalLayout.m */; };
 		F090269B1AE7F20B00F92889 /* AFN Locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = F090269A1AE7F20A00F92889 /* AFN Locations.plist */; };
+		F0E010461AEB2CC200C5002E /* UIButton+DetailAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E010451AEB2CC200C5002E /* UIButton+DetailAccessory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,8 @@
 		F09026971AE6C43300F92889 /* UIButton+VerticalLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+VerticalLayout.h"; sourceTree = "<group>"; };
 		F09026981AE6C43300F92889 /* UIButton+VerticalLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+VerticalLayout.m"; sourceTree = "<group>"; };
 		F090269A1AE7F20A00F92889 /* AFN Locations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AFN Locations.plist"; sourceTree = "<group>"; };
+		F0E010441AEB2CC200C5002E /* UIButton+DetailAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DetailAccessory.h"; sourceTree = "<group>"; };
+		F0E010451AEB2CC200C5002E /* UIButton+DetailAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DetailAccessory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +165,8 @@
 				AC53E9D31ADC9C0A0036FD32 /* AppDelegate.h */,
 				AC53E9D41ADC9C0A0036FD32 /* AppDelegate.m */,
 				F02EC68C1ADD710A005A24C2 /* Main.storyboard */,
+				F0E010441AEB2CC200C5002E /* UIButton+DetailAccessory.h */,
+				F0E010451AEB2CC200C5002E /* UIButton+DetailAccessory.m */,
 				AC53E9DC1ADC9C0A0036FD32 /* Images.xcassets */,
 				F09026971AE6C43300F92889 /* UIButton+VerticalLayout.h */,
 				F09026981AE6C43300F92889 /* UIButton+VerticalLayout.m */,
@@ -356,6 +361,7 @@
 				F02EC6931ADD7164005A24C2 /* main.m in Sources */,
 				AC53E9F71ADC9E180036FD32 /* LearnTVC.m in Sources */,
 				AC53E9D81ADC9C0A0036FD32 /* ViewController.m in Sources */,
+				F0E010461AEB2CC200C5002E /* UIButton+DetailAccessory.m in Sources */,
 				F09026551ADD76E500F92889 /* MapVC.m in Sources */,
 				F09026991AE6C43300F92889 /* UIButton+VerticalLayout.m in Sources */,
 				F09026921AE4A18400F92889 /* DonateViewController.m in Sources */,

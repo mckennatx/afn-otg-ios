@@ -2,6 +2,10 @@
   "images" : [
     {
       "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
       "scale" : "2x",
       "filename" : "l1_logo_lg@2x.png"
     },
