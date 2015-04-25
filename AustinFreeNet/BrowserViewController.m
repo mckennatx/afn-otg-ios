@@ -11,6 +11,7 @@
 @interface BrowserViewController ()
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) UIBarButtonItem *forwardButton;
 @end
 
 @implementation BrowserViewController
@@ -24,7 +25,24 @@
 	
 	// navigation controller
 	UIBarButtonItem *shareItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navbar_share"] style:UIBarButtonItemStylePlain target:self action:@selector(shareURL)];
-	self.navigationItem.rightBarButtonItem = shareItem;
+	if ([self.url isEqual:AFN_URL]) {
+		UIBarButtonItem *AFNItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navbar_logo"] style:UIBarButtonItemStylePlain target:self action:@selector(backToHomepage)];
+		self.navigationItem.rightBarButtonItems = @[shareItem, AFNItem];
+	} else {
+		self.navigationItem.rightBarButtonItem = shareItem;
+	}
+	
+	UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navbar_back"] style:UIBarButtonItemStylePlain target:self action:@selector(back)];
+	self.navigationItem.leftBarButtonItems = @[backButton, self.forwardButton];
+}
+
+- (UIBarButtonItem *)forwardButton
+{
+	if (!_forwardButton) {
+		_forwardButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navbar_forward"] style:UIBarButtonItemStylePlain target:self.webView action:@selector(goForward)];
+		_forwardButton.enabled = NO;
+	}
+	return _forwardButton;
 }
 
 - (void)makeRequest
@@ -40,6 +58,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)backToHomepage
+{
+	NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
+	[self.webView loadRequest:request];
+}
+
 - (void)shareURL
 {
 	NSURL *url = self.webView.request.URL;
@@ -49,10 +73,24 @@
 	}
 }
 
+- (void)back
+{
+	if ([self.webView canGoBack]) {
+		[self.webView goBack];
+	} else {
+		[self.navigationController popViewControllerAnimated:YES];
+	}
+}
+
 #pragma mark - UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
 	[self.spinner stopAnimating];
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+	self.forwardButton.enabled = [self.webView canGoForward];
 }
 
 /*

@@ -12,4 +12,5 @@
 
 @interface BrowserViewController : UIViewController<UIWebViewDelegate>
 @property (strong, nonatomic) NSURL *url;
+#define AFN_URL [NSURL URLWithString:@"http://austinfree.net"]
 @end

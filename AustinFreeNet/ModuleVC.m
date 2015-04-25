@@ -105,7 +105,7 @@
 {
 	if ([segue.identifier isEqualToString:AFN_PAGE_SEGUE]) {
 		BrowserViewController *browserVC = (BrowserViewController *)segue.destinationViewController;
-		browserVC.url = [NSURL URLWithString:AFN_URL];
+		browserVC.url = AFN_URL;
 	}
 }
 

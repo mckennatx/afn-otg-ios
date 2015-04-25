@@ -112,6 +112,9 @@
 		NSIndexPath *path = [self.tableView indexPathForCell:sender];
 		NSDictionary *dict = self.modules[path.row];
 		mvc.moduleInfo = dict;
+	} else if ([segue.identifier isEqualToString:AFN_PAGE_SEGUE]){
+		BrowserViewController *browserVC = (BrowserViewController *)segue.destinationViewController;
+		browserVC.url = AFN_URL;
 	}
 }
 
