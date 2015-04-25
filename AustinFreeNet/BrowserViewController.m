@@ -26,10 +26,8 @@
 
 - (void)makeRequest
 {
-	NSLog(@"BrowserViewController makeRequest");
 	NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
-//	self.webView.hidden = YES;
-//	UIWebView *webView = (UIWebView *)self.view;
+
 	[self.spinner startAnimating];
 	[self.webView loadRequest:request];
 }
@@ -43,7 +41,6 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
 	[self.spinner stopAnimating];
-//	self.webView.hidden=NO;
 }
 
 /*

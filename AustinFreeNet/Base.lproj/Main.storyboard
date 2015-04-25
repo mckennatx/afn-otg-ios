@@ -227,6 +227,9 @@ Austin Free-Net is a 501(c)(3), a nonprofit organization that has been working t
                                 <state key="normal" title="Donate" image="l2_banner_donate">
                                     <color key="titleColor" red="0.24313725489999999" green="0.58823529409999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="VOp-vM-3oF" kind="show" id="P45-E2-LIg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIx-5d-3Vu">
                                 <rect key="frame" x="198" y="72" width="204" height="69"/>
@@ -395,7 +398,7 @@ Austin Free-Net is a 501(c)(3), a nonprofit organization that has been working t
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AeE-Gz-NPQ">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -451,7 +454,7 @@ Austin Free-Net is a 501(c)(3), a nonprofit organization that has been working t
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uoc-PZ-qJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-46" y="1848"/>
+            <point key="canvasLocation" x="774" y="-84"/>
         </scene>
     </scenes>
     <resources>
@@ -464,7 +467,7 @@ Austin Free-Net is a 501(c)(3), a nonprofit organization that has been working t
         <image name="l2_banner_donate" width="55" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gUQ-xI-MjY"/>
+        <segue reference="P45-E2-LIg"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
