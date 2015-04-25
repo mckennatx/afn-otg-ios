@@ -165,10 +165,10 @@
             </objects>
             <point key="canvasLocation" x="862" y="1447"/>
         </scene>
-        <!--Donate View Controller-->
+        <!--Donate-->
         <scene sceneID="diU-ip-ZtE">
             <objects>
-                <viewController id="GbP-2g-dlz" customClass="DonateViewController" sceneMemberID="viewController">
+                <viewController title="Donate" id="GbP-2g-dlz" customClass="DonateViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EoB-I3-kVn"/>
                         <viewControllerLayoutGuide type="bottom" id="wTd-dz-wrx"/>
@@ -266,6 +266,7 @@ IAo
                     </view>
                     <connections>
                         <outlet property="donateButton" destination="z8g-vz-SyG" id="D4B-i3-a7x"/>
+                        <segue destination="VOp-vM-3oF" kind="show" identifier="Homepage Segue" id="Yqc-4G-tjm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6qm-23-g01" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -468,7 +469,7 @@ IAo
         <image name="l2_logo_lg" width="335" height="110"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="P45-E2-LIg"/>
+        <segue reference="xza-oQ-57I"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

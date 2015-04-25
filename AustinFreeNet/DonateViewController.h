@@ -15,4 +15,6 @@
 
 @interface DonateViewController : UIViewController
 #define DONATE_URL @"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HPV6ZMGRW5VWU"
+#define HOMEPAGE_URL @"http://austinfree.net"
+#define HOMEPAGE_SEGUE @"Homepage Segue"
 @end

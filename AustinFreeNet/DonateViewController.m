@@ -17,8 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	self.navigationController.title = @"Donate";
-    // Do any additional setup after loading the view.
+	// navigation controller
+	self.title = @"Donate";
+	UIBarButtonItem *AFNButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navbar_logo"] style:UIBarButtonItemStylePlain target:self action:@selector(didClickAFNButton)];
+	[self.navigationItem setRightBarButtonItem:AFNButton];
+	
+	// donate button
 	[self.donateButton.imageView setBackgroundColor:UIColorFromRGB(0x3e96c7)];
 	[self.donateButton.imageView setImage:[UIImage imageNamed:@"l2_banner_donate"]];
 	[self.donateButton formatWithDetailAccessory];
@@ -30,6 +34,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)didClickAFNButton
+{
+	[self performSegueWithIdentifier:HOMEPAGE_SEGUE sender:self];
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -38,7 +47,11 @@
     // Pass the selected object to the new view controller.
 	if ([segue.destinationViewController isKindOfClass:[BrowserViewController class]]) {
 		BrowserViewController *browserVC = (BrowserViewController *)segue.destinationViewController;
-		browserVC.url = [NSURL URLWithString:DONATE_URL];
+		if ([segue.identifier isEqualToString:HOMEPAGE_SEGUE]) {
+			browserVC.url = [NSURL URLWithString:HOMEPAGE_URL];
+		} else {
+			browserVC.url = [NSURL URLWithString:DONATE_URL];
+		}
 	}
 	
 }
