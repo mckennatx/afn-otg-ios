@@ -20,6 +20,15 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+	
+	[super viewDidLoad];
+	
+	// navigation controller
+	UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navbar_back"] style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
+	self.navigationItem.leftBarButtonItem = backButton;
+	
+	UIBarButtonItem *AFNButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navbar_logo"] style:UIBarButtonItemStylePlain target:self action:@selector(didClickAFNButton)];
+	[self.navigationItem setRightBarButtonItem:AFNButton];
 }
 
 - (IBAction)didRefresh:(UIRefreshControl *)sender {
@@ -104,6 +113,16 @@
 		NSDictionary *dict = self.modules[path.row];
 		mvc.moduleInfo = dict;
 	}
+}
+
+- (void)didClickAFNButton
+{
+	[self performSegueWithIdentifier:AFN_PAGE_SEGUE sender:self];
+}
+
+- (void)goBack
+{
+	[self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

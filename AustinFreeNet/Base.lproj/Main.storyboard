@@ -354,6 +354,7 @@ IAo
                     <connections>
                         <outlet property="spinner" destination="Pxe-zn-Ysq" id="xt5-ca-Lh4"/>
                         <outlet property="webView" destination="8AT-2A-lsS" id="Gb4-qZ-TNE"/>
+                        <segue destination="VOp-vM-3oF" kind="show" identifier="Homepage Segue" id="zxs-bl-ykh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jEd-4r-AWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -459,7 +460,7 @@ IAo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uoc-PZ-qJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2298" y="1591"/>
+            <point key="canvasLocation" x="2142" y="1586"/>
         </scene>
     </scenes>
     <resources>
@@ -472,7 +473,7 @@ IAo
         <image name="l2_logo_lg" width="335" height="110"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="T65-Zj-yzO"/>
+        <segue reference="zxs-bl-ykh"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

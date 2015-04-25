@@ -10,5 +10,6 @@
 #import "ModuleVC.h"
 
 @interface LearnTVC : UITableViewController
-
+#define AFN_PAGE_SEGUE @"Homepage Segue"
+#define AFN_URL @"http://austinfree.net"
 @end
