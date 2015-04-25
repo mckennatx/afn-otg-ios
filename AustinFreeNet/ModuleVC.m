@@ -18,6 +18,15 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
+	
+	// navigation controller
+	UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navbar_back"] style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
+	self.navigationItem.leftBarButtonItem = backButton;
+	
+	UIBarButtonItem *AFNButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navbar_logo"] style:UIBarButtonItemStylePlain target:self action:@selector(didClickAFNButton)];
+	[self.navigationItem setRightBarButtonItem:AFNButton];
+	
+	// get data
 	self.webView.delegate = self;
 	self.title = self.moduleInfo[@"name"];
 	NSURL *fileURL = [NSURL URLWithString:self.moduleInfo[@"data"]];
@@ -78,6 +87,26 @@
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
 	[self.spinner startAnimating];
+}
+
+#pragma mark - Navigation
+
+- (void)goBack
+{
+	[self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)didClickAFNButton
+{
+	[self performSegueWithIdentifier:AFN_PAGE_SEGUE sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+	if ([segue.identifier isEqualToString:AFN_PAGE_SEGUE]) {
+		BrowserViewController *browserVC = (BrowserViewController *)segue.destinationViewController;
+		browserVC.url = [NSURL URLWithString:AFN_URL];
+	}
 }
 
 @end

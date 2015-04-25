@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BrowserViewController.h"
 @import MediaPlayer;
 
 @interface ModuleVC : UIViewController<UIWebViewDelegate>
 @property NSDictionary *moduleInfo;
+#define AFN_PAGE_SEGUE @"Homepage Segue"
+#define AFN_URL @"http://austinfree.net"
 @end

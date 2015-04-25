@@ -312,6 +312,9 @@ IAo
                             <action selector="didRefresh:" destination="UNW-ut-bv6" eventType="valueChanged" id="F9d-q0-lG4"/>
                         </connections>
                     </refreshControl>
+                    <connections>
+                        <segue destination="VOp-vM-3oF" kind="show" identifier="Homepage Segue" id="T65-Zj-yzO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHk-hb-6YO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -456,7 +459,7 @@ IAo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uoc-PZ-qJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="-84"/>
+            <point key="canvasLocation" x="2298" y="1591"/>
         </scene>
     </scenes>
     <resources>
@@ -469,7 +472,7 @@ IAo
         <image name="l2_logo_lg" width="335" height="110"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xza-oQ-57I"/>
+        <segue reference="T65-Zj-yzO"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
