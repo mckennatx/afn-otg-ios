@@ -17,11 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 	[self.view addSubview:self.webView];
 	[self.view addSubview:self.spinner];
 	self.webView.delegate = self;
 	[self makeRequest];
+	
+	// navigation controller
+	UIBarButtonItem *shareItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navbar_share"] style:UIBarButtonItemStylePlain target:self action:@selector(shareURL)];
+	self.navigationItem.rightBarButtonItem = shareItem;
 }
 
 - (void)makeRequest
@@ -35,6 +38,15 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)shareURL
+{
+	NSURL *url = self.webView.request.URL;
+	if (url) {
+		UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:@[url] applicationActivities:nil];
+		[self presentViewController:activityController animated:YES completion:nil];
+	}
 }
 
 #pragma mark - UIWebViewDelegate
