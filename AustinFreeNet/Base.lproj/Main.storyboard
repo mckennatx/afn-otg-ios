@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tmN-qa-dXg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -50,7 +49,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7G-8i-O8G">
-                                <rect key="frame" x="189" y="0.0" width="223" height="93"/>
+                                <rect key="frame" x="133" y="0.0" width="335" height="93"/>
                                 <state key="normal" image="l1_logo_lg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -205,13 +204,26 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> 
-Austin Free-Net is a 501(c)(3), a nonprofit organization that has been working to bridge the digital divide since 1995.</string>
+                                        <string key="content" base64-UTF8="YES">
+IAo
+</string>
                                         <attributes>
                                             <color key="NSColor" red="0.24313725490196078" green="0.58823529411764708" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="14" name="Avenir-Book"/>
                                             <integer key="NSLigature" value="0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Austin Free-Net is a 501(c)(3), a nonprofit organization that has been working to bridge the digital divide since 1995.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.24313725490196078" green="0.58823529411764708" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name="Avenir-Book"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="7" defaultTabInterval="26.449999999999999">
                                                 <tabStops>
                                                     <textTab alignment="left" location="26.450000762939453"/>
                                                 </tabStops>
@@ -224,43 +236,32 @@ Austin Free-Net is a 501(c)(3), a nonprofit organization that has been working t
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8g-vz-SyG">
                                 <rect key="frame" x="0.0" y="545" width="600" height="55"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                <state key="normal" title="Donate" image="l2_banner_donate">
+                                <state key="normal" title="Make a Donation" image="l2_banner_donate">
                                     <color key="titleColor" red="0.24313725489999999" green="0.58823529409999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="VOp-vM-3oF" kind="show" id="P45-E2-LIg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIx-5d-3Vu">
-                                <rect key="frame" x="198" y="72" width="204" height="69"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="l2_logo_lg" translatesAutoresizingMaskIntoConstraints="NO" id="gme-nA-FQy">
+                                <rect key="frame" x="180" y="72" width="240" height="81"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="237" id="HiM-JM-Zim"/>
-                                    <constraint firstAttribute="width" secondItem="LIx-5d-3Vu" secondAttribute="height" multiplier="237:80" id="Ir3-Eg-i8v"/>
-                                    <constraint firstAttribute="width" priority="750" constant="237" id="wB8-Qd-dU7"/>
+                                    <constraint firstAttribute="width" constant="240" id="KSJ-Eu-Gjh"/>
+                                    <constraint firstAttribute="height" constant="81" id="VX2-7c-h39"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="afn logo">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="HiM-JM-Zim"/>
-                                        <exclude reference="wB8-Qd-dU7"/>
-                                    </mask>
-                                </variation>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wTd-dz-wrx" firstAttribute="top" secondItem="Pon-ld-LUc" secondAttribute="bottom" constant="53" id="0Wg-hs-VxT"/>
-                            <constraint firstItem="Pon-ld-LUc" firstAttribute="top" secondItem="LIx-5d-3Vu" secondAttribute="bottom" constant="8" symbolic="YES" id="CIJ-gU-XJm"/>
+                            <constraint firstItem="gme-nA-FQy" firstAttribute="centerX" secondItem="3lC-41-gvP" secondAttribute="centerX" id="B6M-mb-QVO"/>
                             <constraint firstItem="z8g-vz-SyG" firstAttribute="bottom" secondItem="wTd-dz-wrx" secondAttribute="top" id="CJO-vY-qPc"/>
                             <constraint firstItem="Pon-ld-LUc" firstAttribute="leading" secondItem="3lC-41-gvP" secondAttribute="leadingMargin" id="Ib1-jr-9Qh"/>
                             <constraint firstItem="z8g-vz-SyG" firstAttribute="top" secondItem="Pon-ld-LUc" secondAttribute="bottom" constant="-2" id="P7s-8t-J2B"/>
+                            <constraint firstItem="gme-nA-FQy" firstAttribute="centerX" secondItem="Pon-ld-LUc" secondAttribute="centerX" id="SS2-Mr-eyu"/>
                             <constraint firstItem="z8g-vz-SyG" firstAttribute="leading" secondItem="3lC-41-gvP" secondAttribute="leading" id="Y4S-qb-53K"/>
-                            <constraint firstItem="Pon-ld-LUc" firstAttribute="centerX" secondItem="LIx-5d-3Vu" secondAttribute="centerX" id="pn3-jK-27H"/>
-                            <constraint firstItem="LIx-5d-3Vu" firstAttribute="top" secondItem="EoB-I3-kVn" secondAttribute="bottom" constant="8" symbolic="YES" id="rHa-Ui-eOn"/>
-                            <constraint firstItem="LIx-5d-3Vu" firstAttribute="centerX" secondItem="3lC-41-gvP" secondAttribute="centerX" id="wTE-1v-lmv"/>
                             <constraint firstItem="z8g-vz-SyG" firstAttribute="centerX" secondItem="Pon-ld-LUc" secondAttribute="centerX" id="wzs-14-4Tf"/>
+                            <constraint firstItem="gme-nA-FQy" firstAttribute="top" secondItem="EoB-I3-kVn" secondAttribute="bottom" constant="8" symbolic="YES" id="z9Y-xJ-d7R"/>
                         </constraints>
                     </view>
                     <connections>
@@ -458,13 +459,13 @@ Austin Free-Net is a 501(c)(3), a nonprofit organization that has been working t
         </scene>
     </scenes>
     <resources>
-        <image name="afn logo" width="359" height="117"/>
-        <image name="l1_connect" width="128" height="128"/>
-        <image name="l1_donate" width="128" height="128"/>
-        <image name="l1_learn" width="128" height="128"/>
-        <image name="l1_logo_lg" width="223" height="73"/>
-        <image name="l1_volunteer" width="128" height="128"/>
-        <image name="l2_banner_donate" width="55" height="55"/>
+        <image name="l1_connect" width="192" height="192"/>
+        <image name="l1_donate" width="192" height="192"/>
+        <image name="l1_learn" width="192" height="192"/>
+        <image name="l1_logo_lg" width="335" height="110"/>
+        <image name="l1_volunteer" width="192" height="192"/>
+        <image name="l2_banner_donate" width="83" height="83"/>
+        <image name="l2_logo_lg" width="335" height="110"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="P45-E2-LIg"/>

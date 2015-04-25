@@ -13,6 +13,7 @@
 		AC53E9DD1ADC9C0A0036FD32 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC53E9DC1ADC9C0A0036FD32 /* Images.xcassets */; };
 		AC53E9EC1ADC9C0A0036FD32 /* AustinFreeNetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53E9EB1ADC9C0A0036FD32 /* AustinFreeNetTests.m */; };
 		AC53E9F71ADC9E180036FD32 /* LearnTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53E9F61ADC9E180036FD32 /* LearnTVC.m */; };
+		F00BA79E1AEB3EE4003DEE07 /* UIButton+TopBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = F00BA79D1AEB3EE4003DEE07 /* UIButton+TopBorder.m */; };
 		F02EC67B1ADD65A7005A24C2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F02EC67A1ADD65A7005A24C2 /* Default-568h@2x.png */; };
 		F02EC6801ADD6895005A24C2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC53E9EA1ADC9C0A0036FD32 /* Info.plist */; };
 		F02EC68E1ADD710A005A24C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F02EC68C1ADD710A005A24C2 /* Main.storyboard */; };
@@ -66,6 +67,8 @@
 		AC53E9EB1ADC9C0A0036FD32 /* AustinFreeNetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AustinFreeNetTests.m; sourceTree = "<group>"; };
 		AC53E9F51ADC9DEB0036FD32 /* LearnTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearnTVC.h; sourceTree = "<group>"; };
 		AC53E9F61ADC9E180036FD32 /* LearnTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnTVC.m; sourceTree = "<group>"; };
+		F00BA79C1AEB3EE4003DEE07 /* UIButton+TopBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TopBorder.h"; sourceTree = "<group>"; };
+		F00BA79D1AEB3EE4003DEE07 /* UIButton+TopBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TopBorder.m"; sourceTree = "<group>"; };
 		F02EC67A1ADD65A7005A24C2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F02EC67D1ADD6859005A24C2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F02EC6881ADD7067005A24C2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 				F02EC68C1ADD710A005A24C2 /* Main.storyboard */,
 				F0E010441AEB2CC200C5002E /* UIButton+DetailAccessory.h */,
 				F0E010451AEB2CC200C5002E /* UIButton+DetailAccessory.m */,
+				F00BA79C1AEB3EE4003DEE07 /* UIButton+TopBorder.h */,
+				F00BA79D1AEB3EE4003DEE07 /* UIButton+TopBorder.m */,
 				AC53E9DC1ADC9C0A0036FD32 /* Images.xcassets */,
 				F09026971AE6C43300F92889 /* UIButton+VerticalLayout.h */,
 				F09026981AE6C43300F92889 /* UIButton+VerticalLayout.m */,
@@ -370,6 +375,7 @@
 				F09026961AE5B5FD00F92889 /* BrowserViewController.m in Sources */,
 				F090268F1AE4888C00F92889 /* mapSearchResultsVC.m in Sources */,
 				A20DDEB91ADCAAE40041DA4D /* MainVC.m in Sources */,
+				F00BA79E1AEB3EE4003DEE07 /* UIButton+TopBorder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,10 +6,12 @@
 //  Copyright (c) 2015 AFN. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import "UIButton+DetailAccessory.h"
+#import "UIButton+TopBorder.h"
 #import "BrowserViewController.h"
+@import QuartzCore;
+@import UIKit;
 
 @interface DonateViewController : UIViewController
 #define DONATE_URL @"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HPV6ZMGRW5VWU"

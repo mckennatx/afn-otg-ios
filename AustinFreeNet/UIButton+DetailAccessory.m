@@ -20,7 +20,7 @@
 	
 	
 	// add detail accessory
-	UIImageView *detailAccessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow"]];
+	UIImageView *detailAccessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"l2_caret"]];
 	detailAccessoryView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
 	CGRect frame = detailAccessoryView.frame;
 	frame.origin.x = self.frame.size.width - 20;

@@ -22,6 +22,7 @@
 	[self.donateButton.imageView setBackgroundColor:UIColorFromRGB(0x3e96c7)];
 	[self.donateButton.imageView setImage:[UIImage imageNamed:@"l2_banner_donate"]];
 	[self.donateButton formatWithDetailAccessory];
+	[self.donateButton addTopBorderWithColor:UIColorFromRGB(0xdbddde)];
 }
 
 - (void)didReceiveMemoryWarning {
