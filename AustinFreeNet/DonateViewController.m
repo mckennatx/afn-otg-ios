@@ -22,6 +22,9 @@
 	UIBarButtonItem *AFNButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navbar_logo"] style:UIBarButtonItemStylePlain target:self action:@selector(didClickAFNButton)];
 	[self.navigationItem setRightBarButtonItem:AFNButton];
 	
+	UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navbar_back"] style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
+	self.navigationItem.leftBarButtonItem = backButton;
+	
 	// donate button
 	[self.donateButton.imageView setBackgroundColor:UIColorFromRGB(0x3e96c7)];
 	[self.donateButton.imageView setImage:[UIImage imageNamed:@"l2_banner_donate"]];
@@ -53,7 +56,11 @@
 			browserVC.url = [NSURL URLWithString:DONATE_URL];
 		}
 	}
-	
+}
+
+- (void)goBack
+{
+	[self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end
