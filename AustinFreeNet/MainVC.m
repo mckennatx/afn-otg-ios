@@ -10,7 +10,6 @@
 
 @interface MainVC ()
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
-
 @property (strong, nonatomic) UIAlertController *alertController;
 @end
 
@@ -62,18 +61,20 @@
 	return _alertController;
 }
 
-
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 	self.navigationController.navigationBarHidden = NO;
-	if ([segue.identifier isEqualToString:SIGN_IN_SEGUE]) {
+	if ([segue.destinationViewController isKindOfClass:[BrowserViewController class]]) {
 		BrowserViewController *browserVC = (BrowserViewController *)segue.destinationViewController;
-		browserVC.url = [NSURL URLWithString:VOLUNTEER_SIGN_IN];
-	} else if ([segue.identifier isEqualToString:SIGN_UP_SEGUE]) {
-		BrowserViewController *browserVC = (BrowserViewController *)segue.destinationViewController;
-		browserVC.url = [NSURL URLWithString:VOLUNTEER_SIGN_UP];
+		if ([segue.identifier isEqualToString:SIGN_IN_SEGUE]) {
+			browserVC.url = [NSURL URLWithString:VOLUNTEER_SIGN_IN];
+		} else if ([segue.identifier isEqualToString:SIGN_UP_SEGUE]) {
+			browserVC.url = [NSURL URLWithString:VOLUNTEER_SIGN_UP];
+		} else if ([segue.identifier isEqualToString:@"Homepage Segue"]) {
+			browserVC.url = AFN_URL;
+		}
 	}
 }
 

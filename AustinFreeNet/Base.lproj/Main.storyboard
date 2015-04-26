@@ -48,11 +48,12 @@
                                     <segue destination="GbP-2g-dlz" kind="show" id="YUj-jf-KSd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7G-8i-O8G">
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7G-8i-O8G">
                                 <rect key="frame" x="133" y="0.0" width="335" height="93"/>
-                                <state key="normal" image="l1_logo_lg">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="normal" image="l1_logo_lg"/>
+                                <connections>
+                                    <segue destination="VOp-vM-3oF" kind="show" identifier="Homepage Segue" id="R8U-z0-zu8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8r8-JQ-DAh">
                                 <rect key="frame" x="16" y="104" width="280" height="240"/>
@@ -465,7 +466,7 @@ IAo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uoc-PZ-qJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2142" y="1586"/>
+            <point key="canvasLocation" x="1067" y="1347"/>
         </scene>
     </scenes>
     <resources>
@@ -479,7 +480,7 @@ IAo
         <image name="l2_logo_lg" width="335" height="110"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2JT-z7-o1O"/>
+        <segue reference="R8U-z0-zu8"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
