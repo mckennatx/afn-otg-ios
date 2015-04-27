@@ -35,6 +35,8 @@
 		[self embedVideo:fileURL];
 	} else if ([self.moduleInfo[@"type"] isEqualToString:@"PDF"]) {
 		[self embedPDF:fileURL];
+	} else {
+		[self embedWebsite:fileURL];
 	}
 }
 
@@ -75,6 +77,12 @@
 	}];
 	[task resume];
 //	[self.webView loadRequest:request];
+}
+
+- (void)embedWebsite:(NSURL *)url
+{
+	NSURLRequest *request = [NSURLRequest requestWithURL:url];
+	[self.webView loadRequest:request];
 }
 
 #pragma mark - UIWebView Delegate
