@@ -12,27 +12,32 @@
 @property (strong, nonatomic) NSArray *locations;
 @property (strong, nonatomic) NSMutableArray *searchResults;
 @property (strong, nonatomic) UISearchController *searchController;
+
+@property BOOL searchControllerWasActive;
+@property BOOL searchControllerSearchFieldWasFirstResponder;
 @end
 
 @implementation mapSearchResultsVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
 	self.tableView.delegate = self;
 	self.tableView.dataSource = self;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	
+	[self.searchController.searchBar sizeToFit];
+	
+	// know where the UISearchController will be displayed
+	self.definesPresentationContext = YES;
 }
 
 - (UISearchController *)searchController
 {
 	if (!_searchController) {
-		_searchController = [[UISearchController alloc] initWithSearchResultsController:self];
+		_searchController = [[UISearchController alloc] init];
 		_searchController.searchResultsUpdater = self;
 		_searchController.dimsBackgroundDuringPresentation = NO;
+		_searchController.delegate = self;
 		_searchController.searchBar.delegate = self;
 	}
 	return _searchController;
@@ -41,17 +46,22 @@
 - (NSMutableArray *)searchResults
 {
 	if (!_searchResults) {
-		_searchResults = [[NSMutableArray alloc] initWithCapacity:[self.locations count]];
+		_searchResults = [self.locations mutableCopy];
 	}
 	return _searchResults;
 }
 
-#pragma mark - Table View Delegate
+#pragma mark - UITableViewDelegate
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 	return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+	return [self.searchResults count];
 }
 
 #pragma mark - UITableViewDataSource
@@ -64,14 +74,6 @@
 	return _locations;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-	if (self.searchController.active) {
-		return [self.searchResults count];
-	} else
-		return [self.locations count];
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	static NSString *reuseId = @"Map Cell";
@@ -80,12 +82,7 @@
 	if (!cell) {
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseId];
 	}
-	NSDictionary *dict;
-	if (self.searchController.active) {
-		dict = self.searchResults[indexPath.row];
-	} else {
-		dict = self.locations[indexPath.row];
-	}
+	NSDictionary *dict = self.searchResults[indexPath.row];
 	
 	cell.textLabel.text = dict[@"name"];
 	return cell;
@@ -95,20 +92,19 @@
 
 - (void)filterContentForSearchText:(NSString *)searchText scope:(NSString *)scope
 {
-	NSLog(@"filter content");
-
-	NSPredicate *resultsPredicate = [NSPredicate predicateWithFormat:@"name like[c] %@", searchText];
-	self.searchResults = [NSMutableArray arrayWithArray:[self.locations filteredArrayUsingPredicate:resultsPredicate]];
+	NSPredicate *resultsPredicate = [NSPredicate predicateWithFormat:@"(name CONTAINS[cd] %@) OR (address CONTAINS[cd] %@)", searchText, searchText];
+	
+	self.searchResults = [[self.locations filteredArrayUsingPredicate:resultsPredicate] mutableCopy];
+	[self.tableView reloadData];
 }
 
 #pragma mark - UISearchResultsUpdating
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController
 {
-	NSLog(@"update results");
 	NSString *query = searchController.searchBar.text;
-	[self filterContentForSearchText:query scope:nil];
-	[self.tableView reloadData];
+	NSString *strippedQuery = [query stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+	[self filterContentForSearchText:strippedQuery scope:nil];
 }
 
 #pragma mark - UISearchBarDelegate
@@ -117,37 +113,15 @@
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"Start Search" object:self];
 }
 
-- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
-	__weak __typeof(self) weakSelf = self;
-	dispatch_async(dispatch_get_main_queue(), ^{
-		[weakSelf.searchController resignFirstResponder];
-		[weakSelf.searchController.searchBar endEditing:YES];
-	});
-	[[NSNotificationCenter defaultCenter] postNotificationName:@"Finish Search" object:self];
+	[self filterContentForSearchText:searchText scope:nil];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
-	NSLog(@"Search button clicked");
-	[self updateSearchResultsForSearchController:self.searchController];
-	__weak __typeof(self) weakSelf = self;
-	dispatch_async(dispatch_get_main_queue(), ^{
-		[weakSelf.searchController resignFirstResponder];
-		[weakSelf.searchController.searchBar endEditing:YES];
-	});
-//	[self.searchController.searchBar resignFirstResponder];
+	[searchBar resignFirstResponder];
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"Finish Search" object:self];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

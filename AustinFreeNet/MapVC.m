@@ -34,7 +34,7 @@
 	[self.questionButton.imageView setBackgroundColor:UIColorFromRGB(0x3e96c7)];
 	
 	// container view
-	self.containerFrame = CGRectMake(self.containerView.frame.origin.x, self.containerView.frame.origin.y, self.containerView.bounds.size.width, self.containerView.bounds.size.height);
+	_containerFrame = CGRectMake(self.containerView.frame.origin.x, self.containerView.frame.origin.y, self.containerView.bounds.size.width, self.containerView.bounds.size.height);
 	
 	// map view
 	self.mapView.myLocationEnabled = YES;
@@ -86,8 +86,9 @@
 
 - (void)receiveStartSearchNotification:(NSNotification *)notification
 {
-	CGRect newFrame = CGRectMake(0.0, self.mapView.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
+	CGRect newFrame = CGRectMake(0.0, self.mapView.frame.origin.y, self.view.frame.size.width, self.questionButton.frame.origin.y);
 	[UIView animateWithDuration:0.3 animations:^{
+		[self.mapView setHidden:YES];
 		[self.containerView setFrame:newFrame];
 	}];
 }
@@ -95,6 +96,7 @@
 - (void)receiveFinishedSearchNotification:(NSNotification *)notification
 {
 	[UIView animateWithDuration:0.3 animations:^{
+		[self.mapView setHidden:NO];
 		[self.containerView setFrame:self.containerFrame];
 	}];
 }

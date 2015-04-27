@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "MapVC.h"
 
-@interface mapSearchResultsVC : UITableViewController<UISearchResultsUpdating, UISearchBarDelegate>
+@interface mapSearchResultsVC : UITableViewController<UISearchResultsUpdating, UISearchBarDelegate, UISearchControllerDelegate>
 
 @end
