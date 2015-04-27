@@ -25,6 +25,8 @@
 	
 	// navigation controller
 	self.navigationController.title = @"Connect";
+	UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navbar_back"] style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
+	self.navigationItem.leftBarButtonItem = backButton;
 	
 	// question button
 	[self.questionButton formatWithDetailAccessory];
@@ -149,6 +151,11 @@
 		NSURL *questionUrl = [NSURL URLWithString:@"http://form.jotform.us/form/50925791023151"];
 		browserVC.url = questionUrl;
 	}
+}
+
+- (void)goBack
+{
+	[self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
