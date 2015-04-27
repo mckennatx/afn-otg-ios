@@ -19,6 +19,7 @@
 	[GMSServices provideAPIKey:@"AIzaSyDhbpgwpU0CpIJw9I8v1wjzdfnQ7JlDh54"];
 	[[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0x3E96C7)];
 	[[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+	[[UINavigationBar appearance] setTranslucent:NO];
     return YES;
 }
 

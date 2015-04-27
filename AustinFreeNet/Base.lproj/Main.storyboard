@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tmN-qa-dXg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -48,13 +49,6 @@
                                     <segue destination="GbP-2g-dlz" kind="show" id="YUj-jf-KSd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7G-8i-O8G">
-                                <rect key="frame" x="133" y="0.0" width="335" height="93"/>
-                                <state key="normal" image="l1_logo_lg"/>
-                                <connections>
-                                    <segue destination="VOp-vM-3oF" kind="show" identifier="Homepage Segue" id="R8U-z0-zu8"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8r8-JQ-DAh">
                                 <rect key="frame" x="16" y="104" width="280" height="240"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -67,6 +61,19 @@
                                 </state>
                                 <connections>
                                     <action selector="didPressVolunteerButton:" destination="xbu-AJ-wYB" eventType="touchUpInside" id="JDx-Sn-HyJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7G-8i-O8G">
+                                <rect key="frame" x="171" y="20" width="258" height="76"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Q7G-8i-O8G" secondAttribute="height" multiplier="129:38" id="e70-PF-0RH"/>
+                                </constraints>
+                                <state key="normal" image="l1_logo_lg"/>
+                                <connections>
+                                    <segue destination="VOp-vM-3oF" kind="show" identifier="Homepage Segue" id="R8U-z0-zu8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -87,11 +94,11 @@
                             <constraint firstItem="uha-SL-B3n" firstAttribute="leading" secondItem="UAs-Vs-P43" secondAttribute="leadingMargin" id="RFA-zd-VJc"/>
                             <constraint firstItem="gEq-K5-Muz" firstAttribute="leading" secondItem="8r8-JQ-DAh" secondAttribute="trailing" constant="8" id="Ssh-Ow-rg4"/>
                             <constraint firstItem="8r8-JQ-DAh" firstAttribute="bottom" secondItem="gEq-K5-Muz" secondAttribute="bottom" id="Yym-zh-b7Q"/>
-                            <constraint firstItem="8r8-JQ-DAh" firstAttribute="top" secondItem="Q7G-8i-O8G" secondAttribute="bottom" constant="11" id="l3Y-AL-JCo"/>
+                            <constraint firstItem="8r8-JQ-DAh" firstAttribute="top" secondItem="Q7G-8i-O8G" secondAttribute="bottom" constant="8" id="l3Y-AL-JCo"/>
                             <constraint firstItem="uha-SL-B3n" firstAttribute="width" secondItem="gEq-K5-Muz" secondAttribute="width" id="mOO-K9-8RV"/>
                             <constraint firstItem="Q7G-8i-O8G" firstAttribute="centerX" secondItem="UAs-Vs-P43" secondAttribute="centerX" id="oI0-SP-uVa"/>
                             <constraint firstItem="uha-SL-B3n" firstAttribute="width" secondItem="Yc4-he-28B" secondAttribute="width" id="pul-Rt-nhY"/>
-                            <constraint firstItem="Q7G-8i-O8G" firstAttribute="top" secondItem="UAs-Vs-P43" secondAttribute="topMargin" id="wBJ-rr-E9c"/>
+                            <constraint firstItem="Q7G-8i-O8G" firstAttribute="top" secondItem="UAs-Vs-P43" secondAttribute="topMargin" constant="20" id="wBJ-rr-E9c"/>
                             <constraint firstItem="gEq-K5-Muz" firstAttribute="trailing" secondItem="Yc4-he-28B" secondAttribute="trailing" id="z98-id-b2d"/>
                         </constraints>
                     </view>
@@ -480,7 +487,7 @@ IAo
         <image name="l2_logo_lg" width="335" height="110"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zxs-bl-ykh"/>
+        <segue reference="xza-oQ-57I"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

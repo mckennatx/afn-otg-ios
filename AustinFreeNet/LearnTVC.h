@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ModuleVC.h"
 #import "BrowserViewController.h"
+#import "AppDelegate.h"
 
 @interface LearnTVC : UITableViewController
 #define AFN_PAGE_SEGUE @"Homepage Segue"

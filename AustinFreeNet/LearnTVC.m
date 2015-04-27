@@ -59,6 +59,7 @@
     NSDictionary *dict = self.modules[indexPath.row];
 	//NSLog(@"%@", dict);
     cell.textLabel.text = [dict objectForKey:@"name"];
+	cell.textLabel.textColor = UIColorFromRGB(0x3E96C7);
     
     return cell;
 }
