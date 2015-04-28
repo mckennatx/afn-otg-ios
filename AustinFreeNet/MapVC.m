@@ -39,7 +39,6 @@
 	// map view
 	self.mapView.myLocationEnabled = YES;
 	self.mapView.delegate = self;
-	self.mapView.settings.myLocationButton = YES;
 	self.locationManager.delegate = self;
 	[self.locationManager startUpdatingLocation];
 	
