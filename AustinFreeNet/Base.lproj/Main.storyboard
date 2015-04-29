@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEq-K5-Muz">
-                                <rect key="frame" x="304" y="104" width="280" height="240"/>
+                                <rect key="frame" x="308" y="90" width="276" height="240"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Learn" image="l1_learn">
                                     <color key="titleColor" red="0.24313725489999999" green="0.58823529409999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -29,7 +29,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uha-SL-B3n">
-                                <rect key="frame" x="16" y="352" width="280" height="240"/>
+                                <rect key="frame" x="16" y="345" width="277" height="240"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Connect" image="l1_connect">
                                     <color key="titleColor" red="0.24313725489999999" green="0.58823529409999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yc4-he-28B">
-                                <rect key="frame" x="304" y="352" width="280" height="240"/>
+                                <rect key="frame" x="308" y="345" width="276" height="240"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Donate" image="l1_donate">
                                     <color key="titleColor" red="0.24313725489999999" green="0.58823529409999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -49,22 +49,8 @@
                                     <segue destination="GbP-2g-dlz" kind="show" id="YUj-jf-KSd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8r8-JQ-DAh">
-                                <rect key="frame" x="16" y="104" width="280" height="240"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="jGa-R6-IYR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                <state key="normal" title="Volunteer" image="l1_volunteer">
-                                    <color key="titleColor" red="0.24313725489999999" green="0.58823529409999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="didPressVolunteerButton:" destination="xbu-AJ-wYB" eventType="touchUpInside" id="JDx-Sn-HyJ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7G-8i-O8G">
-                                <rect key="frame" x="171" y="20" width="258" height="76"/>
+                                <rect key="frame" x="195" y="20" width="210" height="62"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
                                 </accessibility>
@@ -76,23 +62,38 @@
                                     <segue destination="VOp-vM-3oF" kind="show" identifier="Homepage Segue" id="R8U-z0-zu8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8r8-JQ-DAh">
+                                <rect key="frame" x="16" y="90" width="277" height="240"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="jGa-R6-IYR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Volunteer" image="l1_volunteer">
+                                    <color key="titleColor" red="0.24313725489999999" green="0.58823529409999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressVolunteerButton:" destination="xbu-AJ-wYB" eventType="touchUpInside" id="JDx-Sn-HyJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.24313725489999999" green="0.58823529409999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="uha-SL-B3n" secondAttribute="bottom" constant="8" id="0I6-im-2KC"/>
+                            <constraint firstAttribute="bottom" secondItem="uha-SL-B3n" secondAttribute="bottom" constant="15" id="0I6-im-2KC"/>
                             <constraint firstItem="8r8-JQ-DAh" firstAttribute="leading" secondItem="uha-SL-B3n" secondAttribute="leading" id="0ZV-hF-hdQ"/>
                             <constraint firstItem="uha-SL-B3n" firstAttribute="top" secondItem="Yc4-he-28B" secondAttribute="top" id="0pE-jY-hlY"/>
                             <constraint firstItem="uha-SL-B3n" firstAttribute="height" secondItem="gEq-K5-Muz" secondAttribute="height" id="2t8-F3-Osy"/>
                             <constraint firstItem="8r8-JQ-DAh" firstAttribute="top" secondItem="gEq-K5-Muz" secondAttribute="top" id="5gI-cF-CbO"/>
                             <constraint firstItem="Yc4-he-28B" firstAttribute="trailing" secondItem="UAs-Vs-P43" secondAttribute="trailingMargin" id="8eK-yV-tAd"/>
-                            <constraint firstItem="uha-SL-B3n" firstAttribute="top" secondItem="8r8-JQ-DAh" secondAttribute="bottom" constant="8" symbolic="YES" id="8gu-BG-sfc"/>
+                            <constraint firstItem="uha-SL-B3n" firstAttribute="top" secondItem="8r8-JQ-DAh" secondAttribute="bottom" constant="15" id="8gu-BG-sfc"/>
                             <constraint firstItem="uha-SL-B3n" firstAttribute="width" secondItem="8r8-JQ-DAh" secondAttribute="width" id="Dal-LG-2ew"/>
                             <constraint firstItem="uha-SL-B3n" firstAttribute="height" secondItem="Yc4-he-28B" secondAttribute="height" id="EUq-e9-fVA"/>
                             <constraint firstItem="uha-SL-B3n" firstAttribute="bottom" secondItem="Yc4-he-28B" secondAttribute="bottom" id="GUW-cU-W94"/>
                             <constraint firstItem="uha-SL-B3n" firstAttribute="height" secondItem="8r8-JQ-DAh" secondAttribute="height" id="KWK-km-mYW"/>
                             <constraint firstItem="uha-SL-B3n" firstAttribute="leading" secondItem="UAs-Vs-P43" secondAttribute="leadingMargin" id="RFA-zd-VJc"/>
-                            <constraint firstItem="gEq-K5-Muz" firstAttribute="leading" secondItem="8r8-JQ-DAh" secondAttribute="trailing" constant="8" id="Ssh-Ow-rg4"/>
+                            <constraint firstItem="gEq-K5-Muz" firstAttribute="leading" secondItem="8r8-JQ-DAh" secondAttribute="trailing" constant="15" id="Ssh-Ow-rg4"/>
                             <constraint firstItem="8r8-JQ-DAh" firstAttribute="bottom" secondItem="gEq-K5-Muz" secondAttribute="bottom" id="Yym-zh-b7Q"/>
                             <constraint firstItem="8r8-JQ-DAh" firstAttribute="top" secondItem="Q7G-8i-O8G" secondAttribute="bottom" constant="8" id="l3Y-AL-JCo"/>
                             <constraint firstItem="uha-SL-B3n" firstAttribute="width" secondItem="gEq-K5-Muz" secondAttribute="width" id="mOO-K9-8RV"/>
@@ -379,6 +380,7 @@ IAo
             <objects>
                 <navigationController id="tmN-qa-dXg" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qMv-HO-qv8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

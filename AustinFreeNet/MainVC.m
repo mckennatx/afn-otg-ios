@@ -19,7 +19,7 @@
     [super viewDidLoad];
 	
 	for (UIButton *button in self.buttons) {
-		button.layer.cornerRadius = 10.0;
+		button.layer.cornerRadius = 5.0;
 		[button.layer setMasksToBounds:YES];
 		
 		[button centerVerticallyWithPadding:30.0f];
