@@ -85,6 +85,11 @@
 	[self.webView loadRequest:request];
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+	return UIStatusBarStyleLightContent;
+}
+
 #pragma mark - UIWebView Delegate
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView

@@ -18,8 +18,9 @@
     // Override point for customization after application launch.
 	[GMSServices provideAPIKey:@"AIzaSyDhbpgwpU0CpIJw9I8v1wjzdfnQ7JlDh54"];
 	[[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0x3E96C7)];
-	[[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+	[[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"Avenir Next" size:20.0]}];
 	[[UINavigationBar appearance] setTranslucent:NO];
+	[application setStatusBarStyle:UIStatusBarStyleLightContent];
     return YES;
 }
 
