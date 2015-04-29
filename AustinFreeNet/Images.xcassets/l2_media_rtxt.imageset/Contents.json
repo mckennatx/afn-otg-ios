@@ -2,18 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "l2_media_rtxt.png"
-    },
-    {
-      "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "l2_media_rtxt-1.png"
+      "filename" : "l2_media_rtxt@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "l2_media_rtxt-2.png"
+      "filename" : "l2_media_rtxt@3x.png"
     }
   ],
   "info" : {

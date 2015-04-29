@@ -479,17 +479,17 @@ IAo
         </scene>
     </scenes>
     <resources>
-        <image name="l1_connect" width="192" height="192"/>
-        <image name="l1_donate" width="192" height="192"/>
-        <image name="l1_learn" width="192" height="192"/>
-        <image name="l1_logo_lg" width="335" height="110"/>
-        <image name="l1_volunteer" width="192" height="192"/>
-        <image name="l2_banner_connect" width="83" height="83"/>
-        <image name="l2_banner_donate" width="83" height="83"/>
-        <image name="l2_logo_lg" width="335" height="110"/>
+        <image name="l1_connect" width="128" height="128"/>
+        <image name="l1_donate" width="128" height="128"/>
+        <image name="l1_learn" width="128" height="128"/>
+        <image name="l1_logo_lg" width="223" height="73"/>
+        <image name="l1_volunteer" width="128" height="128"/>
+        <image name="l2_banner_connect" width="55" height="55"/>
+        <image name="l2_banner_donate" width="55" height="55"/>
+        <image name="l2_logo_lg" width="223" height="73"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xza-oQ-57I"/>
+        <segue reference="T65-Zj-yzO"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

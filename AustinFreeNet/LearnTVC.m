@@ -60,6 +60,12 @@
 	//NSLog(@"%@", dict);
     cell.textLabel.text = [dict objectForKey:@"name"];
 	cell.textLabel.textColor = UIColorFromRGB(0x3E96C7);
+	if ([dict[@"type"] isEqualToString:@"YouTube"]){
+		cell.imageView.image = [UIImage imageNamed:@"l2_media_mov"];
+	} else {
+		cell.imageView.image = [UIImage imageNamed:@"l2_media_rtxt"];
+	}
+	
     
     return cell;
 }

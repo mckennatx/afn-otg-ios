@@ -124,4 +124,9 @@
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"Finish Search" object:self];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	// Todo: Zoom into the right location
+}
+
 @end
