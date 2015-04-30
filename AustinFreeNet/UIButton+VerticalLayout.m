@@ -16,6 +16,8 @@
  
 	CGFloat totalHeight = (imageSize.height + titleSize.height + padding);
 	
+	NSLog(@"Total height %f button height %f", totalHeight, self.bounds.size.height);
+	
 	self.imageEdgeInsets = UIEdgeInsetsMake(- (totalHeight - imageSize.height),
 											0.0f,
 											0.0f,
@@ -23,7 +25,7 @@
  
 	self.titleEdgeInsets = UIEdgeInsetsMake(0.0f,
 											- imageSize.width,
-											- (totalHeight - titleSize.height),
+											- (self.bounds.size.height - 11.0f - titleSize.height),
 											0.0f);
 }
 

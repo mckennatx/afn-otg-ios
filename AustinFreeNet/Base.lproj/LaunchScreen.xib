@@ -11,7 +11,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ny2-S2-Iyg">
-                    <rect key="frame" x="45" y="129" width="390" height="110"/>
+                    <rect key="frame" x="45" y="148" width="390" height="73"/>
                     <state key="normal" image="l1_logo_lg">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -30,6 +30,6 @@
         </view>
     </objects>
     <resources>
-        <image name="l1_logo_lg" width="335" height="110"/>
+        <image name="l1_logo_lg" width="223" height="73"/>
     </resources>
 </document>

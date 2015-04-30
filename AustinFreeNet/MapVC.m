@@ -31,7 +31,7 @@
 	// question button
 	[self.questionButton formatWithDetailAccessory];
 	[self.questionButton addTopBorderWithColor:UIColorFromRGB(0xc7c7cc)];
-	[self.questionButton.imageView setBackgroundColor:UIColorFromRGB(0x3e96c7)];
+	[self.questionButton.imageView setBackgroundColor:UIColorFromRGB(0x40c738)];
 	
 	// container view
 	_containerFrame = CGRectMake(self.containerView.frame.origin.x, self.containerView.frame.origin.y, self.containerView.bounds.size.width, self.containerView.bounds.size.height);
