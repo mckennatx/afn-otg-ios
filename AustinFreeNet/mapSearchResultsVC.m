@@ -127,6 +127,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	// Todo: Zoom into the right location
+	NSDictionary *dict = self.locations[indexPath.row];
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"Select map cell" object:self userInfo:dict];
 }
 
 @end

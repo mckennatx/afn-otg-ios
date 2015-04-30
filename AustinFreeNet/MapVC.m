@@ -63,6 +63,7 @@
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveStartSearchNotification:) name:@"Start Search" object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(receiveFinishedSearchNotification:) name:@"Finish Search" object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveSelectMapCellNotificiation:) name:@"Select map cell" object:nil];
 }
 
 - (void)dealloc
@@ -98,6 +99,15 @@
 		[self.mapView setHidden:NO];
 		[self.containerView setFrame:self.containerFrame];
 	}];
+}
+
+- (void)receiveSelectMapCellNotificiation:(NSNotification *)notification
+{
+	NSDictionary *dict = notification.userInfo;
+	CLLocationCoordinate2D coor = CLLocationCoordinate2DMake([dict[@"latitude"] doubleValue], [dict[@"longitude"] doubleValue]);
+	GMSCameraUpdate *update = [GMSCameraUpdate setTarget:coor zoom:16.0];
+//	[self.mapView moveCamera:update];
+	[self.mapView animateWithCameraUpdate:update];
 }
 
 #pragma mark - UIActionSheetDelegate
