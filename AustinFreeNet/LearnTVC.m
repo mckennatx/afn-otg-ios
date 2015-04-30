@@ -24,6 +24,7 @@
 	[super viewDidLoad];
 	
 	// navigation controller
+//	[self.navigationController setNavigationBarHidden:NO];
 	UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navbar_back"] style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
 	self.navigationItem.leftBarButtonItem = backButton;
 	
@@ -57,7 +58,6 @@
     }
     
     NSDictionary *dict = self.modules[indexPath.row];
-	//NSLog(@"%@", dict);
     cell.textLabel.text = [dict objectForKey:@"name"];
 	cell.textLabel.textColor = UIColorFromRGB(0x3E96C7);
 	if ([dict[@"type"] isEqualToString:@"YouTube"]){
@@ -75,7 +75,6 @@
 - (NSArray *)modules
 {
     if (!_modules) {
-//        NSLog(@"getting modules");
         [self getModulesWithURL:[NSURL URLWithString:@"http://austinfreenet.pythonanywhere.com"]];
     }
     return _modules;

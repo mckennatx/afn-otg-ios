@@ -39,6 +39,18 @@
 	[self presentViewController:self.alertController animated:YES completion:nil];
 }
 
+/*
+- (IBAction)didPressLearnButton:(UIButton *)sender {
+	CATransition *transition = [CATransition animation];
+	transition.duration = 0.4f;
+	transition.type = kCATransitionPush;
+	transition.subtype = kCATransitionFromTop;
+	[self.navigationController.view.layer addAnimation:transition forKey:kCATransition];
+	LearnTVC *learnTVC = [LearnTVC new];
+	[self.navigationController pushViewController:learnTVC animated:NO];
+}
+ */
+
 - (UIAlertController *)alertController
 {
 	if (!_alertController) {

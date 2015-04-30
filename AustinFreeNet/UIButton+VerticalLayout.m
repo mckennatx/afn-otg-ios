@@ -15,9 +15,7 @@
 	CGSize titleSize = [self.titleLabel.text sizeWithAttributes:@{NSFontAttributeName:self.titleLabel.font}];
  
 	CGFloat totalHeight = (imageSize.height + titleSize.height + padding);
-	
-	NSLog(@"Total height %f button height %f", totalHeight, self.bounds.size.height);
-	
+		
 	self.imageEdgeInsets = UIEdgeInsetsMake(- (totalHeight - imageSize.height),
 											0.0f,
 											0.0f,
