@@ -263,7 +263,7 @@ IAo
                                     <color key="titleColor" red="0.24313725489999999" green="0.58823529409999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="VOp-vM-3oF" kind="show" id="P45-E2-LIg"/>
+                                    <action selector="didPressDonateButton:" destination="GbP-2g-dlz" eventType="touchUpInside" id="wjv-Wn-4Va"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="l2_logo_lg" translatesAutoresizingMaskIntoConstraints="NO" id="gme-nA-FQy">
@@ -498,7 +498,7 @@ IAo
         <image name="l2_logo_lg" width="223" height="73"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xza-oQ-57I"/>
+        <segue reference="Yqc-4G-tjm"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

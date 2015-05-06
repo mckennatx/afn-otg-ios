@@ -42,6 +42,12 @@
 	[self performSegueWithIdentifier:HOMEPAGE_SEGUE sender:self];
 }
 
+- (IBAction)didPressDonateButton:(UIButton *)sender {
+	UIApplication *mySafari = [UIApplication sharedApplication];
+	NSURL *url = [NSURL URLWithString:DONATE_URL];
+	[mySafari openURL:url];
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -52,8 +58,6 @@
 		BrowserViewController *browserVC = (BrowserViewController *)segue.destinationViewController;
 		if ([segue.identifier isEqualToString:HOMEPAGE_SEGUE]) {
 			browserVC.url = [NSURL URLWithString:HOMEPAGE_URL];
-		} else {
-			browserVC.url = [NSURL URLWithString:DONATE_URL];
 		}
 	}
 }
