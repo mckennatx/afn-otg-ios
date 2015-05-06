@@ -20,9 +20,9 @@
             <color key="backgroundColor" red="0.24313725489999999" green="0.58823529409999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="Ny2-S2-Iyg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="45" id="02g-WN-Obd"/>
-                <constraint firstItem="Ny2-S2-Iyg" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-56" id="20O-R4-hAe"/>
-                <constraint firstItem="Ny2-S2-Iyg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="De0-dy-zkv"/>
+                <constraint firstItem="Ny2-S2-Iyg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FNN-EW-B1o"/>
+                <constraint firstItem="Ny2-S2-Iyg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="45" id="hSg-et-Voj"/>
+                <constraint firstItem="Ny2-S2-Iyg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="148" id="sZh-JT-7yy"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

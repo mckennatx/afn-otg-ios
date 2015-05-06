@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEq-K5-Muz">
-                                <rect key="frame" x="308" y="90" width="276" height="240"/>
+                                <rect key="frame" x="308" y="101" width="276" height="235"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                 <state key="normal" title="Learn" image="l1_learn">
@@ -30,7 +30,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uha-SL-B3n">
-                                <rect key="frame" x="16" y="345" width="277" height="240"/>
+                                <rect key="frame" x="16" y="351" width="277" height="234"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                 <state key="normal" title="Connect" image="l1_connect">
@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yc4-he-28B">
-                                <rect key="frame" x="308" y="345" width="276" height="240"/>
+                                <rect key="frame" x="308" y="351" width="276" height="234"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                 <state key="normal" title="Donate" image="l1_donate">
@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7G-8i-O8G">
-                                <rect key="frame" x="195" y="20" width="210" height="62"/>
+                                <rect key="frame" x="176" y="20" width="248" height="73"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
                                 </accessibility>
@@ -66,7 +66,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8r8-JQ-DAh">
-                                <rect key="frame" x="16" y="90" width="277" height="240"/>
+                                <rect key="frame" x="16" y="101" width="277" height="235"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="jGa-R6-IYR"/>
@@ -76,6 +76,11 @@
                                 <state key="normal" title="Volunteer" image="l1_volunteer">
                                     <color key="titleColor" red="0.24313725489999999" green="0.58823529409999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jGa-R6-IYR"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="didPressVolunteerButton:" destination="xbu-AJ-wYB" eventType="touchUpInside" id="JDx-Sn-HyJ"/>
                                 </connections>
@@ -498,7 +503,7 @@ IAo
         <image name="l2_logo_lg" width="223" height="73"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Yqc-4G-tjm"/>
+        <segue reference="xza-oQ-57I"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

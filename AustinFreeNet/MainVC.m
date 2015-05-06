@@ -36,6 +36,8 @@
 }
 
 - (IBAction)didPressVolunteerButton:(UIButton *)sender {
+	self.alertController.popoverPresentationController.sourceView = sender;
+	self.alertController.popoverPresentationController.sourceRect = sender.bounds;
 	[self presentViewController:self.alertController animated:YES completion:nil];
 }
 
@@ -68,6 +70,8 @@
 		[_alertController addAction:signInAction];
 		[_alertController addAction:signUpAction];
 		[_alertController addAction:cancelAction];
+		_alertController.popoverPresentationController.sourceView = self.view;
+		_alertController.popoverPresentationController.sourceRect = self.view.bounds;
 	}
 	return _alertController;
 }
